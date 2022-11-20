@@ -1,0 +1,2 @@
+# LazaApp
+Aplikacija za autoskole
