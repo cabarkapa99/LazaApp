@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AutoSkola</title>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./styles/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img src="pictures/hubeg-logo.jpg">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="center-y-axis">Sposobnosti</a></li>
+                    <li><a href="#" class="center-y-axis">Kalendar</a></li>
+                    <li><a href="#" class="center-y-axis">Kontrola</a></li>
+                    <li><a href="#" class="center-y-axis">Personalizacija</a></li>
+                    <li><a href="#" class="center-y-axis">Sigurnost</a></li>
+                    <li><a href="#" class="center-y-axis">Misljenja</a></li>
+                    <li><a href="#" class="center-y-axis">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div id="login-form-outside">
+                <div id="login-form-inside" class="center-y-axis">
+                    <div id="loginBtn">
+                        Login
+                    </div>
+                    <div id="registerBtn">
+                        Register
+                    </div>
+                </div>
+                
+            </div>
+            <div id="language-card">
+                <label><span id="language-span">
+                    <h5 id="language-h5">SRB</h5>
+                    <div id="dropdown-arrow">
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </div>
+                </span></label>
+                
+                <ul class="slide height-0" id="language-slide">
+                    <li class="language" id="SRB"><a href="#"><img src="pictures/icons/serbia.jpg">SRB</a></li>
+                    <li class="language" id="ENG"><a href="#"><img src="pictures/icons/england.jpg">ENG</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div id="hero">
+            <div class="hiden" id="login-register-cards">
+                <div class="login-card hiden" id="login-card">
+                    <div class="close" id="closeLogin">Zatvori</div>
+                    <h2>Login</h2>
+                    <h3>Unesite Vase podatke</h3>
+                    <form class="login-form">
+                        <input class="control" type="text" placeholder="Username" id="username-login">
+                        <div class="password">
+                            <input class="control" id="password-login" placeholder="Password">
+                            <button class="toggle" type="button" onclick="togglePassword(this)"></button>
+                        </div>
+                        <button class="control">LOGIN</button>
+                    </form>
+                </div>
+                <div class="register-card hiden" id="register-card">
+                    <div class="close" id="closeRedister">Zatvori</div>
+                    <h2>Register</h2>
+                    <h3>Unesite Vase podatke</h3>
+                    <form class="register-form">
+                        <input class="control" type="email" placeholder="Email" id="email-register">
+                        <input class="control" type="text" placeholder="Username" id="username-register">
+                        <div class="password">
+                            <input class="control" id="password-register" placeholder="Password">
+                            <button class="toggle" type="button" onclick="togglePassword(this)"></button>
+                        </div>
+                        <button class="control">REGISTER</button>
+                    </form>
+                </div>
+                
+            </div>
+            <div id="circles-1"></div>
+            <div id="circles-2"></div>
+            <h1>Sistem za upravlj podacima u AutoSkolama</h1>
+            <div id="hero-try-free">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
+                    Ipsum has been the industry's standard
+                </p>
+                    <a href="#">
+                        <div id="hero-try-free-Btn">Probaj besplatno</div>
+                    </a>
+            </div>
+            <div id="hero-slider">
+                <div id="slider">
+                    <figure>
+                        <img src="pictures/slider/1.jpg">
+                        <img src="pictures/slider/2.jpg">
+                        <img src="pictures/slider/3.jpg">
+                        <img src="pictures/slider/5.jpg">
+                        <img src="pictures/slider/1.jpg">
+                    </figure>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div id="page-row-2">
+            <div id="circles-3"></div>
+            <div id="circles-4"></div>
+            <h2>Sve na jednom mestu</h2>
+            <h5>svi alati za vodjenje AS na jednom mestu</h5>
+            <div id="page-row-2-cards">
+                <div class="page-row-2-card">
+                    <div class="page-row-2-card-icon">
+                        <div class="pills center-y-axis">
+                            <div class="pill-1"></div>
+                            <div class="pill-2"></div>
+                        </div>
+                        <div class="icon-over-pill">
+                            <i class="fa fa-calendar-minus-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="page-row-2-card-text">
+                        <h6>Kalendar</h6>
+                        <p> 
+                            Letraset sheets containing Lorem Ipsum passages, and more recently with
+                        </p>
+                    </div>
+                    <div class="page-row-2-card-button">
+                            <div>
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="page-row-2-card">
+                    <div class="page-row-2-card-icon">
+                        <div class="pills center-y-axis">
+                            <div class="pill-1"></div>
+                            <div class="pill-2"></div>
+                        </div>
+                        <div class="icon-over-pill">
+                            <i class="fa fa-tasks" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="page-row-2-card-text">
+                        <h6>Kontrola</h6>
+                        <p> 
+                            Letraset sheets containing Lorem Ipsum passages, and more recently with 
+                        </p>
+                    </div>
+                    <div class="page-row-2-card-button">
+                        <div>
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-row-2-card">
+                    <div class="page-row-2-card-icon">
+                        <div class="pills center-y-axis">
+                            <div class="pill-1"></div>
+                            <div class="pill-2"></div>
+                        </div>
+                        <div class="icon-over-pill">
+                            <i class="fa fa-file-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="page-row-2-card-text">
+                        <h6>Personalizacija</h6>
+                        <p>
+                            Letraset sheets containing Lorem Ipsum passages, and more recently with
+                        </p>
+                    </div>
+                    <div class="page-row-2-card-button">
+                        <div>
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-row-2-card">
+                    <div class="page-row-2-card-icon">
+                        <div class="pills center-y-axis">
+                            <div class="pill-1"></div>
+                            <div class="pill-2"></div>
+                        </div>
+                        <div class="icon-over-pill">
+                            <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="page-row-2-card-text">
+                        <h6>Sigurnost</h6>
+                        <p> 
+                            Letraset sheets containing Lorem Ipsum passages, and more recently with 
+                        </p>
+                    </div>
+                    <div class="page-row-2-card-button">
+                        <div>
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page-row-3">
+            <div id="circles-5"></div>
+            <div id="circles-6"></div>
+            <div id="circles-7"></div>
+            <div id="circles-8"></div>
+            <div id="page-row-3-conteiner" class="center-y-axis">
+                <div class="page-row-3-card">
+                    <div class="page-row-3-card-left">
+                        <div class="page-row-3-card-text-inside center-y-axis">
+                            <h3 class="">Kalendar</h3>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                when an unknown printer took a galley of type and scrambled
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="page-row-3-card-right">
+                        <div class="page-row-3-card-picture-pills-right center-y-axis">
+                            <div class="page-row-3-card-picture-pill-1"></div>
+                            <div class="page-row-3-card-picture-pill-2"></div>
+                        </div>
+                        <div class="page-row-3-card-picture-inside-div-right center-y-axis">
+                            <img src="">
+                        </div>
+                    </div>
+                </div>
+                <div class="page-row-3-card">
+                    <div class="page-row-3-card-left">
+                        <div class="page-row-3-card-picture-pills-left center-y-axis">
+                            <div class="page-row-3-card-picture-pill-1"></div>
+                            <div class="page-row-3-card-picture-pill-2"></div>
+                        </div>
+                        <div class="page-row-3-card-picture-inside-div-left center-y-axis">
+                            <img src="">
+                        </div>
+                    </div>
+                    <div class="page-row-3-card-right">
+                        <div class="page-row-3-card-text-inside center-y-axis">
+                            <h3 class="">Kontrola</h3>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                when an unknown printer took a galley of type and scrambled
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-row-3-card">
+                    <div class="page-row-3-card-left">
+                        <div class="page-row-3-card-text-inside center-y-axis">
+                            <h3 class="">Personalizacija</h3>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                when an unknown printer took a galley of type and scrambled
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="page-row-3-card-right">
+                        <div class="page-row-3-card-picture-pills-right center-y-axis">
+                            <div class="page-row-3-card-picture-pill-1"></div>
+                            <div class="page-row-3-card-picture-pill-2"></div>
+                        </div>
+                        <div class="page-row-3-card-picture-inside-div-right center-y-axis">
+                            <img src="">
+                        </div>
+                    </div>
+                </div>
+                <div class="page-row-3-card">
+                    <div class="page-row-3-card-left">
+                        <div class="page-row-3-card-picture-pills-left center-y-axis">
+                            <div class="page-row-3-card-picture-pill-1"></div>
+                            <div class="page-row-3-card-picture-pill-2"></div>
+                        </div>
+                        <div class="page-row-3-card-picture-inside-div-left center-y-axis">
+                            <img src="">
+                        </div>
+                    </div>
+                    <div class="page-row-3-card-right">
+                        <div class="page-row-3-card-text-inside center-y-axis">
+                            <h3 class="">Sigurnost</h3>
+                            <p>
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                when an unknown printer took a galley of type and scrambled
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page-row-4">
+            <h2>Prilagodite svojim potrebama</h2>
+            <h5>ne preplacujte i koristite prema svojim potrebama</h5>
+            <div id="pricelist">
+                <div class="pricelist-offer">
+                    <div class="offer-row-1">
+                        <h6>Tim</h6>
+                        <p>Zа малa preduzeca од 2-3 zaposlenih</p>
+                    </div>
+                    <div class="offer-row-2">
+                        <h4>100 E</h4>
+                        <p>Ustedi 100 evra</p>
+                    </div>
+                    <div class="offer-row-3">
+                        <ul>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                        </ul>
+                    </div>
+                    <div class="offer-row-4">
+                        <div class="choose-btn center-y-axis">Izaberi</div>
+                    </div>
+                </div>
+                <div class="pricelist-offer">
+                    <div class="offer-row-1">
+                        <h6>Biznis</h6>
+                        <p>Zа srednja preduzeca sa nekoliko studija</p>
+                    </div>
+                    <div class="offer-row-2">
+                        <h4>150 E</h4>
+                        <p>Ustedi 200 evra</p>
+                    </div>
+                    <div class="offer-row-3">
+                        <ul>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                        </ul>
+                    </div>
+                    <div class="offer-row-4">
+                        <div class="choose-btn center-y-axis">Izaberi</div>
+                    </div>
+                </div>
+                <div class="pricelist-offer">
+                    <div class="offer-row-1">
+                        <h6>Kompanija</h6>
+                        <p>Za velike kompanije</p>
+                    </div>
+                    <div class="offer-row-2">
+                        <h4>200 E</h4>
+                        <p>Ustedi 300 evra</p>
+                    </div>
+                    <div class="offer-row-3">
+                        <ul>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                            <li><i class="fa fa-check-circle-o" aria-hidden="true"><p>Stavka 1</p></i></li>
+                        </ul>
+                    </div>
+                    <div class="offer-row-4">
+                        <div class="choose-btn center-y-axis">Izaberi</div>
+                    </div>
+                </div>
+            </div>
+
+        <footer>
+
+        </footer>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>
