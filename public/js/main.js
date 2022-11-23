@@ -19,7 +19,7 @@ const registerCard = document.getElementById('register-card');
 const closeRegister = document.getElementById('closeRedister');
 const emailRegister = document.getElementById('email-register');
 
-loginBtn.addEventListener('click-on', (e)=>{
+loginBtn.addEventListener('click', (e)=>{
     loginRegisterCards.classList.add('visible');
     loginCard.classList.add('visible');
     setTimeout(function(){
