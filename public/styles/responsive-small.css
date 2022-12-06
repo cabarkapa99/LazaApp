@@ -1,0 +1,125 @@
+@media (max-width: 600px){
+    #page-row-2{
+        min-height: 850px;
+        height: 110vh;
+    }
+    #page-row-2 h2{
+        top: 22%;
+    }
+    #page-row-2 h5{
+        top: 23%;
+    }
+    #page-row-4{
+        height: 90vh;
+        min-height: 700px;
+    }
+    #page-row-2-cards{
+        display: block;
+        top: 30%;
+        width: 80%;
+        height: 55%;
+        margin: auto;
+    }
+    .page-row-2-card{
+        width: 100%;
+        height: 24%;
+        display: flex;
+        margin-bottom: 1%;
+    }
+    .page-row-2-card-icon{
+        width: 25%;
+        height: 100%;
+    }
+    .pills{
+        width: 100%;
+        height: 100%;
+    }
+    .pill-1{
+        width: calc(15% + 14px);
+        height: 70%;
+        left: 25%;
+        top: 15%;
+    }
+    .pill-2{
+        width: calc(15% + 14px);
+        height: 50%;
+        top: 10%;
+        left: 23%;
+    }
+    .icon-over-pill{
+        font-size: calc(2vw + 24px);
+    }
+    .page-row-2-card-text{
+        width: 50%;
+        height: 100%;
+    }
+    .page-row-2-card-text h6{
+        font-size: calc(0.5vw + 12px);
+        margin: 5% 0 0 5%;
+    }
+    .page-row-2-card-text p{
+        margin: 3% 5%;
+        color: var(--color-gray-dark);
+        font-size: calc(0.45vw + 10px);
+    }
+    .page-row-2-card-button{
+        width: 25%;
+        height: 100%;
+    }
+    .page-row-2-card-button div i{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: calc(1vw + 18px);
+    }
+    .page-row-2-card-button div{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #circles-3{
+        display: none;
+    }
+}
+@media (max-width: 550px){
+    #hero{
+        min-height: 600px;
+        height: 85vh;
+    }
+    #hero-try-free{
+        width: 60%;
+        left: 20%;
+    }
+    #page-row-3{
+        width: 100%;
+        height: 300vw;
+        border-top: 1px solid var(--color-gray-little-darker);
+    }
+    #page-row-3-conteiner{
+        width: 80vw;
+        height: 290vw;
+        margin: auto;
+    }
+    .page-row-3-card{
+        width: 100%;
+        height: 25%;
+        display: block;
+    }
+    .page-row-3-card-text{
+        width: 100%;
+        height: 30%;
+        position: relative;
+    }
+    .page-row-3-card-picture{
+        width: 100%;
+        height: 70%;
+        position: relative;
+        background-color: brown;
+    }
+    .page-row-3-card-picture-inside-div-right, .page-row-3-card-picture-inside-div-left{
+        margin: auto;
+    }
+    #circles-1{
+        display: none;
+    }
+}

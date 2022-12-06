@@ -6,6 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="./styles/main.css">
+        <link rel="stylesheet" type="text/css" href="./styles/responsive-midd.css">
+        <link rel="stylesheet" type="text/css" href="./styles/responsive-small.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -13,12 +15,16 @@
             <div id="logo">
                 <img src="pictures/hubeg-logo.jpg">
             </div>
-            <nav>
-                <ul>
+            <nav id="nav">
+                <div id="burger" class="center-y-axis margin-58">
+                    <span id="line1" class="line"></span>
+                    <span id="line2" class="line"></span>
+                    <span id="line3" class="line"></span>
+                </div>
+                <ul id="nav-list" class="height-0-850px">
                     <li><a href="#" class="center-y-axis">Sposobnosti</a></li>
                     <li><a href="#" class="center-y-axis">Kalendar</a></li>
                     <li><a href="#" class="center-y-axis">Kontrola</a></li>
-                    <li><a href="#" class="center-y-axis">Personalizacija</a></li>
                     <li><a href="#" class="center-y-axis">Sigurnost</a></li>
                     <li><a href="#" class="center-y-axis">Misljenja</a></li>
                     <li><a href="#" class="center-y-axis">Kontakt</a></li>
@@ -36,12 +42,14 @@
                 
             </div>
             <div id="language-card">
-                <label><span id="language-span">
-                    <h5 id="language-h5">SRB</h5>
-                    <div id="dropdown-arrow">
-                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                <label>
+                    <div id="language-div">
+                        <h5 id="language-h5">SRB</h5>
+                        <div id="dropdown-arrow">
+                            <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        </div>
                     </div>
-                </span></label>
+                </label>
                 
                 <ul class="slide height-0" id="language-slide">
                     <li class="language" id="SRB"><a href="#"><img src="pictures/icons/serbia.jpg">SRB</a></li>
@@ -83,10 +91,12 @@
             </div>
             <div id="circles-1"></div>
             <div id="circles-2"></div>
-            <h1>Sistem za upravlj podacima u AutoSkolama</h1>
+            <h1>LAZA je aplikacija koja Vam olaksava vodjenje Autoskole</h1>
             <div id="hero-try-free">
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
-                    Ipsum has been the industry's standard
+                    Ipsum has beenLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
+                    Ipsum has beenLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
+                    Ipsum has been
                 </p>
                     <a href="#">
                         <div id="hero-try-free-Btn">Probaj besplatno</div>
@@ -110,7 +120,7 @@
             <div id="circles-3"></div>
             <div id="circles-4"></div>
             <h2>Sve na jednom mestu</h2>
-            <h5>svi alati za vodjenje AS na jednom mestu</h5>
+            <h5>Svi alati za vodjenje AS na jednom mestu</h5>
             <div id="page-row-2-cards">
                 <div class="page-row-2-card">
                     <div class="page-row-2-card-icon">
@@ -212,7 +222,7 @@
             <div id="circles-8"></div>
             <div id="page-row-3-conteiner" class="center-y-axis">
                 <div class="page-row-3-card">
-                    <div class="page-row-3-card-left">
+                    <div class="page-row-3-card-left page-row-3-card-text">
                         <div class="page-row-3-card-text-inside center-y-axis">
                             <h3 class="">Kalendar</h3>
                             <p>
@@ -222,7 +232,7 @@
                         </div>
                         
                     </div>
-                    <div class="page-row-3-card-right">
+                    <div class="page-row-3-card-right page-row-3-card-picture">
                         <div class="page-row-3-card-picture-pills-right center-y-axis">
                             <div class="page-row-3-card-picture-pill-1"></div>
                             <div class="page-row-3-card-picture-pill-2"></div>
@@ -233,7 +243,7 @@
                     </div>
                 </div>
                 <div class="page-row-3-card">
-                    <div class="page-row-3-card-left">
+                    <div class="page-row-3-card-left page-row-3-card-picture">
                         <div class="page-row-3-card-picture-pills-left center-y-axis">
                             <div class="page-row-3-card-picture-pill-1"></div>
                             <div class="page-row-3-card-picture-pill-2"></div>
@@ -242,7 +252,7 @@
                             <img src="">
                         </div>
                     </div>
-                    <div class="page-row-3-card-right">
+                    <div class="page-row-3-card-right page-row-3-card-text">
                         <div class="page-row-3-card-text-inside center-y-axis">
                             <h3 class="">Kontrola</h3>
                             <p>
@@ -253,7 +263,7 @@
                     </div>
                 </div>
                 <div class="page-row-3-card">
-                    <div class="page-row-3-card-left">
+                    <div class="page-row-3-card-left page-row-3-card-text">
                         <div class="page-row-3-card-text-inside center-y-axis">
                             <h3 class="">Personalizacija</h3>
                             <p>
@@ -263,7 +273,7 @@
                         </div>
                         
                     </div>
-                    <div class="page-row-3-card-right">
+                    <div class="page-row-3-card-right page-row-3-card-picture">
                         <div class="page-row-3-card-picture-pills-right center-y-axis">
                             <div class="page-row-3-card-picture-pill-1"></div>
                             <div class="page-row-3-card-picture-pill-2"></div>
@@ -274,7 +284,7 @@
                     </div>
                 </div>
                 <div class="page-row-3-card">
-                    <div class="page-row-3-card-left">
+                    <div class="page-row-3-card-left page-row-3-card-picture">
                         <div class="page-row-3-card-picture-pills-left center-y-axis">
                             <div class="page-row-3-card-picture-pill-1"></div>
                             <div class="page-row-3-card-picture-pill-2"></div>
@@ -283,7 +293,7 @@
                             <img src="">
                         </div>
                     </div>
-                    <div class="page-row-3-card-right">
+                    <div class="page-row-3-card-right page-row-3-card-text">
                         <div class="page-row-3-card-text-inside center-y-axis">
                             <h3 class="">Sigurnost</h3>
                             <p>
@@ -313,7 +323,6 @@
                     </div>
                     <div class="offer-row-3">
                         <ul>
-                            <li><i class="fa fa-check" aria-hidden="true"></i><p>Stavka 1</p></li>
                             <li><i class="fa fa-check" aria-hidden="true"></i><p>Stavka 1</p></li>
                             <li><i class="fa fa-check" aria-hidden="true"></i><p>Stavka 1</p></li>
                             <li><i class="fa fa-check" aria-hidden="true"></i><p>Stavka 1</p></li>
@@ -372,7 +381,14 @@
                     </div>
                 </div>
             </div>
-
+        </div>
+        <div id="page-row-5">
+            <div id="circles-11"></div>
+            <div id="page-row-5-try-free">
+                <h4 class="center-y-axis">Probajte besplatno 7 dana</h4>
+                <div id="page-row-5-try-free-Btn" class="center-y-axis">Probaj sada</div>
+            </div>
+        </div>
         <footer>
 
         </footer>

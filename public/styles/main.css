@@ -1,11 +1,4 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-html{
-    scroll-behavior: smooth;
-}
-body{
+:root{
     --color-white: rgb(255,255,255);
     --color-black: rgb(0,0,0);
     --color-light-black: rgb(55,55,55);
@@ -16,12 +9,28 @@ body{
     --color-blue-2: rgb(30, 27, 195);
     --color-blue-3: rgb(20, 18, 150);
     --color-yellow: rgb(255, 186, 1);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .center-y-axis{
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
+}
+.none{
+    display: none;
+}
+.block{
+    display: block;
 }
 .hiden{
     visibility: hidden;
@@ -32,35 +41,43 @@ body{
     opacity: 1;
 }
 header{
-    height: 90px;
-    width: 100%;
+    height: 10vh;
+    min-height: 90px;
+    width: 100vw;
     display: flex;
     position: fixed;
     z-index: 5;
-    border-bottom: 1px solid var(--color-light-gray);
+    border-bottom: 1px solid var(--color-gray-little-darker);
     background-color: var(--color-white);
 }
 #logo{
-    width: 33%;
+    width: 10vw;
     height: 100%;
 }
 #logo img{
-    width: 20%;
+    width: 90%;
     position: relative;
     top: 50%;
     left: 10%;
     transform: translate(0, -50%);
 }
+#burger{
+    display: none;
+    width: 50px;
+}
 nav{
-    width: 34%;
+    width: 68vw;
     height: 100%;
-    transition: 0.8s;
+    position: relative;
+    display: flex;
 }
 nav ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
     height: 100%;
+    position: relative;
+    margin-left: calc(62% - 340px);
 }
 nav ul li{
     text-align: center;
@@ -73,35 +90,55 @@ nav ul li a{
     text-decoration: none;
     display: inline-block;
     color: var(--color-black);
+    font-size: calc(0.35vw + 10px);
+    padding: 0 0.5vw;
 }
 nav ul li a:hover{
     transition: all 0.3s ease 0s;
     text-decoration: none;
     color: var(--color-blue-1);
 }
+.line{
+    display: block;
+    height: 3px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    background-color: var(--color-blue-1);
+    width: 100%;
+    border-radius: 15px;
+}
+#line1{
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+#line2{
+    transition: transform 0.2s ease-in-out;
+}
+#line3{
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
 #login-form-outside{
     height: 100%;
-    width: 28%;
+    width: 17vw;
     position: relative;
 }
 #login-form-inside{
     display: flex;
-    justify-content: space-around;
-    width: 60%;
+    width: 15vw;
     height: 50%;
     position: relative;
-    left: 40%;
     border-right: 3px solid var(--color-light-gray);
 }
 #loginBtn{
     background-color: var(--color-blue-1);
     color: var(--color-white);
-    margin: auto;
-    padding: 10px 12%;
+    padding: 8px 12%;
     border-radius: 6px;
     cursor: pointer;
-    border: 2px solid var(--color-gray-little-darker);
     transition: 0.15s;
+    font-size: calc(0.45vw + 8px);
+    margin: auto;
 }
 #loginBtn:hover{
     box-shadow: inset -2px -2px 8px #9d96af, inset 2px 2px 5px #0d0427
@@ -110,29 +147,34 @@ nav ul li a:hover{
     background-color: var(--color-white);
     color: var(--color-blue-1);
     margin: auto;
-    padding: 10px 10%;
+    padding: 8px 10%;
     border-radius: 6px;
     border: 1.5px solid var(--color-gray-little-darker);
     cursor: pointer;
     transition: 0.15s;
+    font-size: calc(0.45vw + 8px);
 }
 #registerBtn:hover{
     box-shadow: inset -1px -1px 8px rgb(230, 226, 226), inset 1px 1px 5px rgb(138, 133, 133);
 }
 #language-card{
-    width: 5%;
+    width: 5vw;
     height: 100%;
 }
 #language-card label{  
     text-align: center;
 }
-#language-span{
-    font-size: 1.2em;
+#language-div{
+    font-size: calc(0.45vw + 10px);
     cursor: pointer;
     display: block;
-    padding: 35% 0 0 25%;
+    padding: 36px 0 0 0%;
     display: flex;
     position: relative;
+    left: -0.8vw;
+}
+#language-h5{
+    font-weight: 649;
 }
 #dropdown-arrow{
     position: relative;
@@ -154,16 +196,16 @@ nav ul li a:hover{
 }
 .slide{
     clear: both;
-    width: 90%;
+    width: 120%;
     overflow: hidden;
     text-align: center;
     transition: height .4s ease;
     margin-top: 5px;
     position: relative;
-    left: 5%;
+    left: -2.1vw;
 }
 .slide li{
-    padding: 10px;
+    padding: 10px 0;
     background-color: var(--color-gray-little-darker);
     height: 50%;
     border-bottom: 1px solid var(--color-light-gray);
@@ -172,6 +214,8 @@ nav ul li a:hover{
 .slide li a{
     text-decoration: none;
     color: black;
+    font-size: calc(0.40vw + 8px);
+    font-weight: 500;
 }
 .slide li a img{
     height: 13px;
@@ -188,6 +232,7 @@ nav ul li a:hover{
 #hero{
     width: 100%;
     height: 100vh;
+    min-height: 800px;
     position: relative;
 }
 #login-register-cards{
@@ -325,21 +370,24 @@ button{
 }
 #hero h1{
     position: absolute;
-    top: 25%;
-    left: 18%;
-    font-size: 3.2vw;
-    width: 35%;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    font-size: calc(1.8vw + 20px);
     color: var(--color-light-black);
+    line-height: 1.1;
+    margin: auto;
 }
 #hero-try-free{
-    width: 25%;
+    width: 30%;
     height: 20%;
+    text-align: justify;
     position: absolute;
-    top: 25%;
-    right: 18%;
+    top: 35%;
+    left: 25%;
 }
 #hero-try-free p{
-    font-size: 1.1vw;
+    font-size: calc(0.7vw + 5px);
     font-weight: 600;
     word-wrap: break-word;
     line-height: 150%;
@@ -351,11 +399,11 @@ button{
     top: 10%;
     display: inline-block;
     padding: 3% 8.5%;
-    font-size: 1.1vw;
+    font-size: calc(0.6vw + 8px);
     border-radius: 7px;
     color: var(--color-white);
-    border: 2px solid var(--color-gray-little-darker);
     transition: 0.15s;
+    font-weight: 500;
 }
 #hero-try-free-Btn:hover{
     box-shadow: inset -2px -2px 8px #b8b5c0, inset 3px 3px 5px #1e0b57
@@ -364,7 +412,7 @@ button{
     width: 65%;
     height: 65%;
     position: absolute;
-    top: 65%;
+    top: 70%;
     left: 17.5%;
     border: 10px solid var(--color-black);
     border-radius: 20px;
@@ -421,6 +469,7 @@ button{
 #page-row-2{
     width: 100%;
     height: 135vh;
+    min-height: 1080px;
     background-color: var(--color-light-gray);
     border-top: 1px solid var(--color-gray-little-darker);
     position: relative;
@@ -429,14 +478,14 @@ button{
     position: relative;
     top: 30%;
     text-align: center;
-    font-size: 3vw;
+    font-size: calc(2.2vw + 20px);
     color: var(--color-light-black);
 }
 #page-row-2 h5{
     position: relative;
     top: 31%;
     text-align: center;
-    font-size: 1.1vw;
+    font-size: calc(0.75vw + 10px);
     color: var(--color-light-black);
 }
 #page-row-2-cards{
@@ -450,7 +499,7 @@ button{
 }
 .page-row-2-card{
     height: 100%;
-    width: 23.5%;
+    width: 14.6vw;
     background-color: var(--color-white);
     border: 1px solid var(--color-gray-little-darker);
     border-radius: 8px;
@@ -467,7 +516,7 @@ button{
     position: relative;
 }
 .pill-1{
-    width: 35%;
+    width: calc(15% + 24px);
     height: 100%;
     background-color: var(--color-light-gray);
     position: relative;
@@ -480,7 +529,7 @@ button{
     display: inline-block;
 }
 .pill-2{
-    width: 35%;
+    width: calc(15% + 24px);
     height: 70%;
     background-color: var(--color-light-gray);
     position: relative;
@@ -498,7 +547,7 @@ button{
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 2.2vw;
+    font-size: calc(1vw + 24px);
     font-weight: bold;
     color: var(--color-blue-1);
 }
@@ -513,14 +562,14 @@ button{
     height: 30%;
 }
 .page-row-2-card-text h6{
-    font-size: 1vw;
+    font-size: calc(0.5vw + 12px);
     margin: 2% 15%;
     color: var(--color-light-black);
 }
 .page-row-2-card-text p{
     margin: 2% 15%;
     color: var(--color-gray-dark);
-    font-size: 0.8vw;
+    font-size: calc(0.45vw + 8px);
 }
 .page-row-2-card-button{
     width: 100%;
@@ -533,7 +582,7 @@ button{
     background-color: var(--color-blue-1);
     border-radius: 50%;
     position: relative;
-    top: 10%;
+    top: 25%;
     left: 15%;
     display: inline-block;
     cursor: pointer;
@@ -543,7 +592,7 @@ button{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5vw;
+    font-size: calc(1vw + 10px);
     color: var(--color-white);
 }
 #circles-3{
@@ -566,12 +615,12 @@ button{
 }
 #page-row-3{
     width: 100%;
-    height: 300vh;
+    height: 140vw;
     border-top: 1px solid var(--color-gray-little-darker);
 }
 #page-row-3-conteiner{
-    width: 75%;
-    height: 90%;
+    width: 75vw;
+    height: 130vw;
     margin: auto;
 }
 .page-row-3-card{
@@ -587,16 +636,15 @@ button{
 .page-row-3-card-text-inside{
     width: 70%;
     margin: 0 15% 0 15%;
-    
 }
 .page-row-3-card h3{
-    font-size: 2.8vw;
+    font-size: calc(1.7vw + 18px);
     color: var(--color-light-black);
 }
 .page-row-3-card p{
-    font-size: 1vw;
+    font-size: calc(0.45vw + 8px);
     padding-top: 3%;
-    line-height: 1.5;
+    line-height: 2;
     color: var(--color-light-black);
     font-weight: 500;
 }
@@ -620,7 +668,7 @@ button{
 }
 .page-row-3-card-picture-pill-1{
     width: 35%;
-    height: calc(68% + 12vw);
+    height: 105.5%;
     background-color: var(--color-blue-1);
     position: relative;
     margin: auto;
@@ -633,7 +681,7 @@ button{
 }
 .page-row-3-card-picture-pill-2{
     width: 35%;
-    height: calc(40% + 10vw);
+    height: 75%;
     background-color: var(--color-blue-1);
     position: relative;
     margin: auto;
@@ -671,8 +719,8 @@ button{
     background-image:  
           url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
     position: absolute;
-    top: 303.5%;
-    right: 13.5%;
+    margin-left: 77vw;
+    margin-top: 30vw;
 }
 #circles-6{
     height: 100px;
@@ -680,8 +728,8 @@ button{
     background-image:  
           url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
     position: absolute;
-    top: 345%;
-    left: 13.5%;
+    margin-left: 13vw;
+    margin-top: 50vw;
 }
 #circles-7{
     height: 100px;
@@ -689,8 +737,8 @@ button{
     background-image:  
           url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
     position: absolute;
-    top: 438.5%;
-    right: 13.5%;
+    margin-left: 77vw;
+    margin-top: 95.7vw;
 }
 #circles-8{
     height: 100px;
@@ -698,8 +746,8 @@ button{
     background-image:  
           url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
     position: absolute;
-    top: 480%;
-    left: 13.5%;
+    margin-left: 13vw;
+    margin-top: 115vw;
 }
 #page-row-4{
     width: 100%;
@@ -709,7 +757,7 @@ button{
 }
 #page-row-4 h2{
     text-align: center;
-    font-size: 3vw;
+    font-size: calc(1.7vw + 18px);
     position: relative;
     top: 12%;
 }
@@ -717,7 +765,8 @@ button{
     text-align: center;
     position: relative;
     top: 13%;
-    font-size: 1vw;
+    font-size: calc(0.5vw + 10px);
+    font-weight: 700;
 }
 #page-row-4-recommended{
     position: relative;
@@ -730,6 +779,7 @@ button{
     padding: 0.3% 0;
     z-index: 2;
     border-radius: 5px;
+    font-size: calc(0.5vw + 10px);
 }
 #pricelist{
     width: 65%;
@@ -741,7 +791,7 @@ button{
     justify-content: space-around;
 }
 .pricelist-offer{
-    width: 30%;
+    width: 31.5%;
     height: 100%;
     border: 1px solid var(--color-gray-little-darker);
     border-radius: 10px;
@@ -752,6 +802,12 @@ button{
 .pricelist-offer:nth-child(2) .offer-row-1{
     color: var(--color-white);
     background-color: var(--color-blue-1);
+}
+.pricelist-offer:nth-child(2) .offer-row-1 h6{
+    top: 20%;
+}
+.pricelist-offer:nth-child(2) .offer-row-1 p{
+    top: 22%;
 }
 .pricelist-offer:nth-child(2) .offer-row-1 p{
     color: var(--color-white);
@@ -772,12 +828,13 @@ button{
 .offer-row-1 h6{
     position: relative;
     top: 25%;
-    font-size: 1vw;
+    font-size: calc(0.40vw + 12px);
 }
 .offer-row-1 p{
     position: relative;
     top: 27%;
     color: var(--color-gray-dark);
+    font-size: calc(0.45vw + 10px);
 }
 .offer-row-2{
     width: 100%;
@@ -786,7 +843,7 @@ button{
     text-align: center;
 }
 .offer-row-2 h4{
-    font-size: 2vw;
+    font-size: calc(1.5vw + 20px);
     color: var(--color-blue-1);
     position: relative;
     top: 20%;
@@ -796,14 +853,14 @@ button{
 }
 .offer-row-2 h4 p{
     position: relative;
-    font-size: 0.8vw;
+    font-size: calc(0.6vw + 6px);
     color: var(--color-gray-little-darker);
     display: inline-block;
     font-weight: 500;
 }
 .offer-row-2>p{
     position: relative;
-    font-size: 0.8vw;
+    font-size: calc(0.5vw + 8px);
     top: 18%;
     color: var(--color-yellow);
     display: inline-block;
@@ -813,6 +870,7 @@ button{
     width: 100%;
     height: 52%;
     border-bottom: 1px solid var(--color-gray-little-darker);
+    background-color: var(--color-white);
 }
 .offer-row-3 ul{
     width: 100%;
@@ -829,7 +887,7 @@ button{
 .offer-row-3 i{
     display: inline-block;
     display: flex;
-    font-size: 0.8vw;
+    font-size: calc(0.4vw + 10px);
     color: var(--color-blue-1);
     font-weight: 100;
     margin: 2% 0;
@@ -839,9 +897,9 @@ button{
 }
 .offer-row-3 p{
     color: var(--color-black);
-    font-size: 0.85vw;
-    margin: 1.5% 0 0 10%;
-    font-weight: 510;
+    font-size: calc(0.45vw + 10px);
+    margin: 3% 0 0 10%;
+    font-weight: 500;
     color: var(--color-light-black);
     display: inline-block;
 }
@@ -862,6 +920,7 @@ button{
     color: var(--color-blue-1);
     font-weight: 500;
     cursor: pointer;
+    font-size: calc(0.6vw + 8px);
 }
 .choose-btn:hover{
     box-shadow: inset -1.5px -1.5px 12px rgb(230, 226, 226), inset 1.5px 1.5px 8px rgb(138, 133, 133);
@@ -887,4 +946,55 @@ button{
     position: absolute;
     top: 81%;
     left: 14%;
+}
+#page-row-5{
+    width: 100%;
+    height: 45vh;
+    min-height: 300px;
+    background-color: var(--color-blue-1);
+    position: relative;
+}
+#circles-11{
+    height: 100px;
+    width: 170px;
+    background-image:  
+          url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(96, 91, 227)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+    position: absolute;
+    margin-left: 82vw;
+    margin-top: 12vw;
+}
+#page-row-5-try-free{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+}
+#page-row-5-try-free h4{
+    height: 100px;
+    line-height: 100px;
+    font-size: calc(1.7vw + 18px);
+    color: var(--color-light-gray);
+}
+#page-row-5-try-free-Btn{
+    height: 33%;
+    vertical-align: top;
+    text-align: center;
+    line-height: 65px;
+    font-size: calc(0.8vw + 10px);
+    background-color: var(--color-light-gray);
+    margin-left: 5%;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 500;
+    color: var(--color-light-black);
+    padding: 0 4%;
+}
+#page-row-5-try-free-Btn:hover{
+    box-shadow: inset -3px -3px 12px rgb(255, 249, 249), inset 3px 3px 8px rgb(124, 119, 119);
+    transition: 0.1s;
 }
