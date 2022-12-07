@@ -1,4 +1,8 @@
 @media (max-width: 600px){
+    .login-card, .register-card{
+        width: 290px;
+        padding: 70px 22px 50px;
+    }
     #page-row-2{
         min-height: 850px;
         height: 110vh;
@@ -9,73 +13,13 @@
     #page-row-2 h5{
         top: 23%;
     }
-    #page-row-4{
-        height: 90vh;
-        min-height: 700px;
-    }
-    #page-row-2-cards{
-        display: block;
-        top: 30%;
-        width: 80%;
-        height: 55%;
-        margin: auto;
-    }
-    .page-row-2-card{
-        width: 100%;
-        height: 24%;
-        display: flex;
-        margin-bottom: 1%;
-    }
-    .page-row-2-card-icon{
-        width: 25%;
-        height: 100%;
-    }
-    .pills{
-        width: 100%;
-        height: 100%;
-    }
-    .pill-1{
-        width: calc(15% + 14px);
-        height: 70%;
-        left: 25%;
-        top: 15%;
-    }
-    .pill-2{
-        width: calc(15% + 14px);
-        height: 50%;
-        top: 10%;
-        left: 23%;
-    }
-    .icon-over-pill{
-        font-size: calc(2vw + 24px);
-    }
-    .page-row-2-card-text{
-        width: 50%;
-        height: 100%;
-    }
     .page-row-2-card-text h6{
         font-size: calc(0.5vw + 12px);
         margin: 5% 0 0 5%;
     }
-    .page-row-2-card-text p{
-        margin: 3% 5%;
-        color: var(--color-gray-dark);
-        font-size: calc(0.45vw + 10px);
-    }
-    .page-row-2-card-button{
-        width: 25%;
-        height: 100%;
-    }
-    .page-row-2-card-button div i{
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: calc(1vw + 18px);
-    }
-    .page-row-2-card-button div{
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    #page-row-4{
+        height: 90vh;
+        min-height: 700px;
     }
     #circles-3{
         display: none;

@@ -66,7 +66,7 @@ header{
     width: 50px;
 }
 nav{
-    width: 68vw;
+    width: 60vw;
     height: 100%;
     position: relative;
     display: flex;
@@ -77,7 +77,7 @@ nav ul{
     justify-content: space-between;
     height: 100%;
     position: relative;
-    margin-left: calc(62% - 340px);
+    margin-left: calc(75% - 340px);
 }
 nav ul li{
     text-align: center;
@@ -120,7 +120,7 @@ nav ul li a:hover{
 }
 #login-form-outside{
     height: 100%;
-    width: 17vw;
+    width: 23vw;
     position: relative;
 }
 #login-form-inside{
@@ -128,7 +128,7 @@ nav ul li a:hover{
     width: 15vw;
     height: 50%;
     position: relative;
-    border-right: 3px solid var(--color-light-gray);
+    margin: auto;
 }
 #loginBtn{
     background-color: var(--color-blue-1);
@@ -158,23 +158,25 @@ nav ul li a:hover{
     box-shadow: inset -1px -1px 8px rgb(230, 226, 226), inset 1px 1px 5px rgb(138, 133, 133);
 }
 #language-card{
-    width: 5vw;
+    width: 7vw;
     height: 100%;
 }
 #language-card label{  
     text-align: center;
 }
 #language-div{
+    width: 100%;
+    height: 100%;
     font-size: calc(0.45vw + 10px);
     cursor: pointer;
     display: block;
     padding: 36px 0 0 0%;
     display: flex;
     position: relative;
-    left: -0.8vw;
 }
 #language-h5{
     font-weight: 649;
+    margin-left: 20%;
 }
 #dropdown-arrow{
     position: relative;
@@ -196,13 +198,11 @@ nav ul li a:hover{
 }
 .slide{
     clear: both;
-    width: 120%;
+    width: 100%;
     overflow: hidden;
     text-align: center;
     transition: height .4s ease;
-    margin-top: 5px;
     position: relative;
-    left: -2.1vw;
 }
 .slide li{
     padding: 10px 0;
@@ -210,6 +210,7 @@ nav ul li a:hover{
     height: 50%;
     border-bottom: 1px solid var(--color-light-gray);
     cursor: pointer;
+    margin-left: -20%;
 }
 .slide li a{
     text-decoration: none;

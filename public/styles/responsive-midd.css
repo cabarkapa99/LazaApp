@@ -79,14 +79,8 @@
     }
 }
 @media (max-width: 1024px){
-    nav{
-        width: 65vw;
-    }
     nav ul{
-        margin-left: calc(68% - 320px);
-    }
-    #login-form-outside{
-        width: 19w;
+        margin-left: calc(75% - 300px);
     }
     #loginBtn{
         padding: 7px 14%;
@@ -96,17 +90,10 @@
     #registerBtn{
         padding: 7px 12%;
         font-size: calc(0.45vw + 8px);
-    }    
-    #language-card{
-        width: 5vw;
-    }
-    .slide{
-        width: 145%;
-        margin-top: 5px;
-        left: -1vw;
     }
     .slide li{
         padding: 5px 0;
+        margin-left: 0%;
     }
     #circles-1{
         height: 70px;
@@ -126,6 +113,49 @@
     #hero{
         min-height: 752px;
         max-height: 850px;
+    }
+    .login-card, .register-card{
+        width: 350px;
+        padding: 80px 25px 55px;
+    }
+    .login-card > h2, .register-card > h2{
+        font-size: 30px;
+        font-weight: 600;
+        margin: 0 0 6px;
+    }
+    .login-card > h3, .register-card > h3{
+        color: var(--color-gray-dark);
+        margin: 0 0 35px;
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+    .close{
+        position: absolute;
+        top: 3%;
+        right: 5%;
+        cursor: pointer;
+        font-size: 16px;
+        color: #5a4f79;
+        transition: 0.3s;
+    }
+    .control{
+        border: 0;
+        height: 50px;
+        font-size: 14px;
+    }
+    .login-form, .register-form{
+        gap: 14px;
+    }
+    .login-form > button.control, .register-form > button.control{
+        height: 50px;
+        width: 100%;
+        padding:  0 14px;
+        font-size: 0.9rem;
+    }
+    .toggle{
+        right: 14px;
+        width: 25px;
+        height: 25px;
     }
     #hero h1{
         padding: 0 10%;
@@ -286,6 +316,9 @@
     }
 }
 @media (max-width: 900px){
+    #loginBtn{
+        margin-left: -15%;
+    }
     .page-row-3-card p{
         font-size: calc(0.45vw + 8px);
         padding-top: 3%;
@@ -432,7 +465,6 @@
     #burger{
     }
     #login-form-outside{
-        width: 30%;
     }
     #login-form-inside{
         margin: auto;
@@ -444,9 +476,48 @@
     #language-card{
         width: 10%;
     }
-    #language-div{
-        width: 50%;
-        margin: auto;
+    .login-card, .register-card{
+        width: 320px;
+        padding: 70px 22px 50px;
+    }
+    .login-card > h2, .register-card > h2{
+        font-size: 27px;
+        font-weight: 600;
+        margin: 0 0 6px;
+    }
+    .login-card > h3, .register-card > h3{
+        color: var(--color-gray-dark);
+        margin: 0 0 32px;
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+    .close{
+        position: absolute;
+        top: 3%;
+        right: 5%;
+        cursor: pointer;
+        font-size: 16px;
+        color: #5a4f79;
+        transition: 0.3s;
+    }
+    .control{
+        border: 0;
+        height: 45px;
+        font-size: 14px;
+    }
+    .login-form, .register-form{
+        gap: 14px;
+    }
+    .login-form > button.control, .register-form > button.control{
+        height: 48px;
+        width: 100%;
+        padding:  0 14px;
+        font-size: 0.9rem;
+    }
+    .toggle{
+        right: 14px;
+        width: 25px;
+        height: 25px;
     }
     .slide{
         width: 100%;
@@ -497,21 +568,73 @@
     }
 }
 @media (max-width: 650px){
-    
     #hero-slider{
         height: 50%;
         top: 70%;
     }
-    .slide{
-        width: 120%;
-        left: -1vw;
-    }
     #page-row-2-cards{
-        width: 95%;
+        display: block;
+        top: 30%;
+        width: 80%;
+        height: 55%;
+        margin: auto;
     }
     .page-row-2-card{
+        width: 100%;
+        height: 24%;
+        display: flex;
+        margin-bottom: 1%;
+    }
+    .page-row-2-card-icon{
+        width: 25%;
         height: 100%;
-        width: 23.2vw;
+    }
+    .pills{
+        width: 100%;
+        height: 100%;
+    }
+    .pill-1{
+        width: calc(15% + 14px);
+        height: 70%;
+        left: 25%;
+        top: 15%;
+    }
+    .pill-2{
+        width: calc(15% + 14px);
+        height: 50%;
+        top: 10%;
+        left: 23%;
+    }
+    .icon-over-pill{
+        font-size: calc(2vw + 24px);
+    }
+    .page-row-2-card-text{
+        width: 50%;
+        height: 100%;
+    }
+    .page-row-2-card-text h6{
+        font-size: calc(0.5vw + 12px);
+        margin: 8% 0 0 5%;
+    }
+    .page-row-2-card-text p{
+        margin: 3% 5%;
+        color: var(--color-gray-dark);
+        font-size: calc(0.45vw + 10px);
+    }
+    .page-row-2-card-button{
+        width: 25%;
+        height: 100%;
+    }
+    .page-row-2-card-button div i{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: calc(1vw + 18px);
+    }
+    .page-row-2-card-button div{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     #circles-5{
         display: none;
