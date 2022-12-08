@@ -83,12 +83,12 @@ const openList = function(){
     list.classList.add('height-300');
     logo.classList.add('none');
     loginFormOutside.classList.add('none');
-    languageCard.classList.add('none');
     hamburger.classList.add('margin-48');
     hamburger.classList.remove('margin-58');
     nav.classList.add('nav-clicked');
     line1.classList.add('white');
     line3.classList.add('white');
+    languageCard.style.display = 'block';
     clicked = true;
 }
 const closeList = function(){
@@ -100,13 +100,13 @@ const closeList = function(){
     setTimeout(function(){
         logo.classList.remove('none');
         loginFormOutside.classList.remove('none');
-        languageCard.classList.remove('none');
         hamburger.classList.remove('burger-margin-left');
         hamburger.classList.add('margin-58');
         hamburger.classList.remove('margin-48');
         nav.classList.remove('nav-clicked');
         line1.classList.remove('white');
         line3.classList.remove('white');
+        languageCard.style.display = 'none';
     }, 320);
     clicked = false;
 }

@@ -31,7 +31,7 @@
         left: 8.5%;
     }
     #circles-4{
-        right: 10%;
+        display: none;
     }
     #circles-5{
         margin-left: 85vw;
@@ -51,7 +51,7 @@
     }
     #pricelist{
         width: 75%;
-        height: 55%;
+        height: 59%;
     }
     .choose-btn{
         padding: 1.5% 0;
@@ -78,6 +78,11 @@
         margin-top: 12vw;
     }
 }
+@media (max-width: 1250px){
+    #pricelist{
+        height: 55%;
+    }
+}
 @media (max-width: 1024px){
     nav ul{
         margin-left: calc(75% - 300px);
@@ -85,11 +90,12 @@
     #loginBtn{
         padding: 7px 14%;
         font-size: calc(0.45vw + 8px);
-        margin-left: -10%;
+        margin-left: -20%;
     }
     #registerBtn{
         padding: 7px 12%;
         font-size: calc(0.45vw + 8px);
+        margin-left: 5%;
     }
     .slide li{
         padding: 5px 0;
@@ -228,7 +234,7 @@
         width: 100px;
         background-image:  
           url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='25'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='3.5' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
-          margin-left: 90vw;
+          margin-left: 85vw;
     }
     #circles-6{
         height: 70px;
@@ -241,7 +247,7 @@
         width: 100px;
         background-image:  
           url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='25'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='3.5' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
-          margin-left: 90vw;
+          margin-left: 85vw;
           margin-top: 107vw;
     }
     #circles-8{
@@ -257,7 +263,7 @@
     }
     #pricelist{
         width: 85%;
-        height: 55%;
+        height: 60%;
     }
     .offer-row-3 ul{
         top: 6%;
@@ -286,6 +292,7 @@
         background-image:  
           url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='25'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='3.5' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
         top: 20%;
+        left: 85%;
     }
     #circles-10{
         height: 70px;
@@ -330,12 +337,18 @@
     }
     #pricelist{
         width: 90%;
-        height: 55%;
+        height: 65%;
     }
     #circles-11{
         height: 50px;
         width: 70px;
         margin-top: 23vw;
+    }
+    #circles-6{
+        left: -10%;
+    }
+    #circles-8{
+        left: -10%;
     }
 }
 @media (max-width: 850px){
@@ -346,7 +359,7 @@
         height: 300px;
     }
     .margin-58{
-        margin-left: 58%;
+        margin-left: 62%;
     }
     .margin-48{
         margin-left: 48%;
@@ -397,20 +410,6 @@
         font-weight: 500;
         color: white;
     }
-    #logo{
-    }
-    #logo img{
-    }
-    nav{
-    }
-    #login-form-outside{
-    }
-    #loginBtn{
-    }
-    #language-card{
-    }
-    #language-div{
-    }
     #hero-try-free{
         width: 45%;
     }
@@ -425,7 +424,7 @@
         height: 182vw;
     }
     #page-row-3-conteiner{
-        width: 100vw;
+        width: 95vw;
         height: 173vw;
     }
     #circles-5{
@@ -457,7 +456,7 @@
 }
 @media (max-width: 768px){
     .margin-58{
-        margin-left: 64%;
+        margin-left: 54%;
     }
     #logo{
         width: 15%;
@@ -465,13 +464,20 @@
     #burger{
     }
     #login-form-outside{
+        width: 25%;
     }
     #login-form-inside{
         margin: auto;
         border: none;
     }
+    #loginBtn{
+        margin-left: -20%;
+    }
     #registerBtn{
-        margin-left: 10%;
+    }
+    #language-card{
+        display: none;
+        z-index: 10;
     }
     #language-card{
         width: 10%;
@@ -543,7 +549,7 @@
     }
     #pricelist{
         top: 20%;
-        height: 54%;
+        height: 68%;
         width: 95%;
     }.offer-row-1{
         height: 20%;
@@ -568,6 +574,9 @@
     }
 }
 @media (max-width: 650px){
+    #loginBtn{
+        margin-left: -30%;
+    }
     #hero-slider{
         height: 50%;
         top: 70%;
