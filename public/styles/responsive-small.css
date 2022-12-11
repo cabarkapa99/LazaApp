@@ -97,11 +97,11 @@
         border-radius: 10px 0px 0 0;
     }
     .offer-row-1 h6{
-        top: 10%;
-        font-size: calc(0.80vw + 12px);
+        top: 25%;
+        font-size: calc(0.80vw + 14px);
     }
     .offer-row-1 p{
-        top: 10%;
+        top: 20%;
         font-size: calc(0.45vw + 10px);
     }
     .offer-row-2{
@@ -137,6 +137,7 @@
     }
     .offer-row-3 ul li{
         width: 75%;
+        margin-top: 2%;
     }
     .offer-row-3 i{
         font-size: calc(1vw + 12px);
@@ -146,6 +147,9 @@
         margin-left: 10%;
         display: block;
         font-size: calc(1vw + 8px);
+        font-weight: light;
+        letter-spacing: .6px;
+        font-weight: 400;
     }
     .offer-row-4{
         width: 100%;
