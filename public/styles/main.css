@@ -394,6 +394,10 @@ button{
     line-height: 150%;
     color: var(--color-light-black);
 }
+#hero-try-free a{
+    text-decoration: none;
+    color: var(--color-white);
+}
 #hero-try-free-Btn{
     background-color: var(--color-blue-1);
     position: relative;
@@ -614,60 +618,60 @@ button{
   top: 62%; 
   right: 13.5%;
 }
-#page-row-3{
+#about{
     width: 100%;
     height: 140vw;
     border-top: 1px solid var(--color-gray-little-darker);
 }
-#page-row-3-conteiner{
+#about-conteiner{
     width: 75vw;
     height: 130vw;
     margin: auto;
 }
-.page-row-3-card{
+.about-card{
     width: 100%;
     height: 25%;
     display: flex;
 }
-.page-row-3-card-left{
+.about-card-left{
     width: 50%;
     height: 100%;
     position: relative;
 }
-.page-row-3-card-text-inside{
+.about-card-text-inside{
     width: 70%;
     margin: 0 15% 0 15%;
 }
-.page-row-3-card h3{
+.about-card h3{
     font-size: calc(1.7vw + 18px);
     color: var(--color-light-black);
 }
-.page-row-3-card p{
+.about-card p{
     font-size: calc(0.45vw + 8px);
     padding-top: 3%;
     line-height: 2;
     color: var(--color-light-black);
     font-weight: 500;
 }
-.page-row-3-card-right{
+.about-card-right{
     width: 50%;
     height: 100%;
     position: relative;
 }
-.page-row-3-card-picture-pills-right{
+.about-card-picture-pills-right{
     width: 100%;
     height: 100%;
     margin: auto;
     position: absolute;
 }
-.page-row-3-card-picture-pills-left{
+.about-card-picture-pills-left{
     width: 100%;
     height: 100%;
     margin: auto;
     position: absolute;
     left: 15%;
 }
-.page-row-3-card-picture-pill-1{
+.about-card-picture-pill-1{
     width: 35%;
     height: 105.5%;
     background-color: var(--color-blue-1);
@@ -680,7 +684,7 @@ button{
     left: 12.5%;
     display: inline-block;
 }
-.page-row-3-card-picture-pill-2{
+.about-card-picture-pill-2{
     width: 35%;
     height: 75%;
     background-color: var(--color-blue-1);
@@ -693,7 +697,7 @@ button{
     left: 13%;
     display: inline-block;
 }
-.page-row-3-card-picture-inside-div-right{
+.about-card-picture-inside-div-right{
     width: 85%;
     height: 75%;
     border: 5px solid var(--color-light-black);
@@ -702,7 +706,7 @@ button{
     position: relative;
     background-color: #a5f1c6;
 }
-.page-row-3-card-picture-inside-div-left{
+.about-card-picture-inside-div-left{
     width: 85%;
     height: 75%;
     border: 5px solid var(--color-light-black);
@@ -711,7 +715,7 @@ button{
     position: relative;
     background-color: #a5f1c6;
 }
-.page-row-3-card-picture img{
+.about-card-picture img{
 
 }
 #circles-5{
@@ -750,26 +754,26 @@ button{
     margin-left: 13vw;
     margin-top: 115vw;
 }
-#page-row-4{
+#packages{
     width: 100%;
     height: 150vh;
     position: relative;
     border-top: 1px solid var(--color-gray-little-darker);
 }
-#page-row-4 h2{
+#packages h2{
     text-align: center;
     font-size: calc(1.7vw + 18px);
     position: relative;
     top: 12%;
 }
-#page-row-4 h5{
+#packages h5{
     text-align: center;
     position: relative;
     top: 13%;
     font-size: calc(0.5vw + 10px);
     font-weight: 700;
 }
-#page-row-4-recommended{
+#packages-recommended{
     position: relative;
     top: 21%;
     margin: auto;

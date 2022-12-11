@@ -45,7 +45,7 @@
     #circles-8{
         margin-left: 0vw;
     }
-    #page-row-4{
+    #packages{
         max-height: 1050px;
         min-height: 1000px;
     }
@@ -68,7 +68,7 @@
         height: 30%;
         line-height: 60px;
     }
-    #page-row-4-recommended{
+    #packages-recommended{
         width: 12%;
     }
     #circles-11{
@@ -226,11 +226,11 @@
     #circles-4{
         display: none;
     }
-    #page-row-3{
+    #about{
         max-height: 2550px;
         height: 155vw;
     }
-    #page-row-3-conteiner{
+    #about-conteiner{
         width: 85vw;
         height: 147vw;
     }
@@ -262,7 +262,7 @@
           url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='25'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='3.5' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
         margin-top: 128vw;
     }
-    #page-row-4{
+    #packages{
         max-height: 950px;
         min-height: 900px;
     }
@@ -306,7 +306,7 @@
         height: 25%;
         line-height: 50px;
     }
-    #page-row-4-recommended{
+    #packages-recommended{
         width: 14%;
     }
     #circles-11{
@@ -322,12 +322,12 @@
     #loginBtn{
         margin-left: -15%;
     }
-    .page-row-3-card p{
+    .about-card p{
         font-size: calc(0.45vw + 8px);
         padding-top: 3%;
         line-height: 1.5;
     }
-    #page-row-4{
+    #packages{
         max-height: 850px;
         min-height: 849px;
     }
@@ -416,10 +416,10 @@
         height: 100%;
         width: 21.5vw;
     }
-    #page-row-3{
+    #about{
         height: 182vw;
     }
-    #page-row-3-conteiner{
+    #about-conteiner{
         width: 95vw;
         height: 173vw;
     }
@@ -539,7 +539,7 @@
     }
 }
 @media (max-width: 700px){
-    #page-row-4{
+    #packages{
         height: 100vh;
         min-height: 770px;
     }

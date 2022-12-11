@@ -20,57 +20,57 @@
         font-size: calc(0.5vw + 12px);
         margin: 5% 0 0 5%;
     }
-    #page-row-3{
+    #about{
         width: 100%;
         height: 360vw;
         border-top: 1px solid var(--color-gray-little-darker);
     }
-    #page-row-3-conteiner{
-        width: 70vw;
+    #about-conteiner{
+        width: 80vw;
         height: 350vw;
         margin: auto;
     }
-    .page-row-3-card{
+    .about-card{
         width: 100%;
         height: 25%;
         display: block;
     }
-    .page-row-3-card-text{
+    .about-card-text{
         width: 100%;
         height: 25%;
         position: relative;
     }
-    .page-row-3-card-text-inside{
+    .about-card-text-inside{
         width: 100%;
         margin: 0;
     }
-    .page-row-3-card h3{
+    .about-card h3{
         font-size: calc(2.5vw + 18px);
         text-align: center;
     }
-    .page-row-3-card p{
+    .about-card p{
         font-size: calc(0.5vw + 10px);
         text-align: center;
         padding-top: 0%;
     }
-    .page-row-3-card-picture{
+    .about-card-picture{
         width: 100%;
         height: 75%;
         position: relative;
     }
-    .page-row-3-card-picture-inside-div-right, .page-row-3-card-picture-inside-div-left{
+    .about-card-picture-inside-div-right, .about-card-picture-inside-div-left{
         margin: auto;
     }
-    .page-row-3-card-picture-pills-left{
+    .about-card-picture-pills-left{
         left: 0;
     }
-    .page-row-3-card-picture-pill-1{
+    .about-card-picture-pill-1{
         width: 35%;
         height: 100%;
         top: -2%;
         left: 20%;
     }
-    .page-row-3-card-picture-pill-2{
+    .about-card-picture-pill-2{
         width: 35%;
         height: 70%;
         top: -7%;
@@ -85,23 +85,23 @@
         position: relative;
         top: -75%;
     }
-    #page-row-4{
+    #packages{
         height: 90vh;
         min-height: 700px;
     }
     #circles-3{
         display: none;
     }
-    #page-row-4{
+    #packages{
         min-height: 1100px;
     }
-    #page-row-4 h2{
+    #packages h2{
         top: 4%;
     }
-    #page-row-4 h5{
+    #packages h5{
         top: 5%;
     }
-    #page-row-4-recommended{
+    #packages-recommended{
         top: 36%;
         width: 22%;
     }
@@ -163,7 +163,6 @@
         border: none;
     }
     .offer-row-3 ul{
-        top: 0%;
         display: flex;
     }
     .offer-row-3 ul div{
@@ -184,8 +183,7 @@
         display: block;
         font-size: calc(1vw + 8px);
         font-weight: light;
-        letter-spacing: .6px;
-        font-weight: 400;
+        font-weight: 500;
     }
     .offer-row-4{
         width: 100%;
@@ -199,8 +197,15 @@
         height: 70%;
         margin: auto;
         top: 40%;
-        padding: 0.3% 0;
+        padding: 0.4% 0;
         font-size: calc(0.6vw + 12px);
+    }
+    #circles-11{
+        height: 40px;
+        width: 40px;
+        margin-top: 28vw;
+        background-image:  
+          url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='20'> <rect width='3' height='2' fill='rgb(96, 91, 227)' /><circle cx='4' cy='4' r='2.5' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
     }
 }
 @media (max-width: 550px){
@@ -216,4 +221,75 @@
     #circles-1{
         display: none;
     }
+    #page-row-5-try-free{
+        display: block;
+    }
+    #page-row-5-try-free h4{
+        text-align: center;
+        top: 35%;
+    }
+    #page-row-5-try-free-Btn{
+        top: 15%;
+        margin: auto;
+        width: 30%;
+        height: 35px;
+        padding: 0%;
+        line-height: 35px;
+    }
 }
+@media (max-width: 500px){
+
+    #hero-try-free{
+        top: 40%;
+    }
+    .choose-btn{
+        padding: 0.8% 0;
+    }
+    #circles-11{
+        margin-top: 35vw; }
+}
+@media (max-width: 450px){
+    #hero{
+        min-height: 550px;
+        height: 70vh;
+    }
+    #hero h1{
+        top: 23%;
+        font-size: calc(2vw + 22px);
+    }
+    #hero-try-free-Btn{
+        font-size: calc(0.5vw + 12px);
+    }
+    #page-row-2{
+        min-height: 500px;
+        height: 100vh;
+    }
+    #page-row-2 h2{
+        top: 21%;
+    }
+    #page-row-2 h5{
+        top: 22%;
+    }
+    #page-row-2-cards{
+        height: 62%;
+        top: 28%;
+    }
+    .page-row-2-card-text{
+        width: 90%;
+    }
+    .page-row-2-card-text h6{
+        font-size: calc(0.7vw + 12px);
+    }
+    .page-row-2-card-text p{
+        font-size: calc(0.5vw + 12px);
+        margin: 1% 10% 0% 0%;
+    }
+    .offer-row-3 ul{
+        top: 5%;
+    }
+    .choose-btn{
+        padding: 1% 0;
+    }
+}
+
+
