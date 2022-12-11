@@ -22,12 +22,12 @@
     }
     #page-row-3{
         width: 100%;
-        height: 300vw;
+        height: 360vw;
         border-top: 1px solid var(--color-gray-little-darker);
     }
     #page-row-3-conteiner{
-        width: 80vw;
-        height: 290vw;
+        width: 70vw;
+        height: 350vw;
         margin: auto;
     }
     .page-row-3-card{
@@ -37,17 +37,53 @@
     }
     .page-row-3-card-text{
         width: 100%;
-        height: 30%;
+        height: 25%;
         position: relative;
+    }
+    .page-row-3-card-text-inside{
+        width: 100%;
+        margin: 0;
+    }
+    .page-row-3-card h3{
+        font-size: calc(2.5vw + 18px);
+        text-align: center;
+    }
+    .page-row-3-card p{
+        font-size: calc(0.5vw + 10px);
+        text-align: center;
+        padding-top: 0%;
     }
     .page-row-3-card-picture{
         width: 100%;
-        height: 70%;
+        height: 75%;
         position: relative;
-        background-color: brown;
     }
     .page-row-3-card-picture-inside-div-right, .page-row-3-card-picture-inside-div-left{
         margin: auto;
+    }
+    .page-row-3-card-picture-pills-left{
+        left: 0;
+    }
+    .page-row-3-card-picture-pill-1{
+        width: 35%;
+        height: 100%;
+        top: -2%;
+        left: 20%;
+    }
+    .page-row-3-card-picture-pill-2{
+        width: 35%;
+        height: 70%;
+        top: -7%;
+        left: 18%;
+        display: inline-block;
+    }
+    .page-row-2-card-for-replace-1{
+        position: relative;
+        top: 25%;
+    }
+    .page-row-2-card-for-replace-2{
+        position: relative;
+        top: -75%;
     }
     #page-row-4{
         height: 90vh;
