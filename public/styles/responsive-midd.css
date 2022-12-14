@@ -45,7 +45,7 @@
     #circles-8{
         margin-left: 0vw;
     }
-    #page-row-4{
+    #packages{
         max-height: 1050px;
         min-height: 1000px;
     }
@@ -54,7 +54,6 @@
         height: 59%;
     }
     .choose-btn{
-        padding: 1.5% 0;
     }
     #circles-9{
         width: 100px;
@@ -68,7 +67,7 @@
         height: 30%;
         line-height: 60px;
     }
-    #page-row-4-recommended{
+    #packages-recommended{
         width: 12%;
     }
     #circles-11{
@@ -85,12 +84,17 @@
 }
 @media (max-width: 1024px){
     nav ul{
-        margin-left: calc(75% - 300px);
     }
     #loginBtn{
         padding: 7px 14%;
         font-size: calc(0.45vw + 8px);
         margin-left: -20%;
+    }
+    #logo{
+        margin-left: 2.5%;
+    }
+    nav{
+        width: 55vw;
     }
     #registerBtn{
         padding: 7px 12%;
@@ -221,11 +225,11 @@
     #circles-4{
         display: none;
     }
-    #page-row-3{
+    #about{
         max-height: 2550px;
         height: 155vw;
     }
-    #page-row-3-conteiner{
+    #about-conteiner{
         width: 85vw;
         height: 147vw;
     }
@@ -257,7 +261,7 @@
           url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='25'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='3.5' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
         margin-top: 128vw;
     }
-    #page-row-4{
+    #packages{
         max-height: 950px;
         min-height: 900px;
     }
@@ -274,17 +278,8 @@
     .offer-row-2{
         height: 16%;
     }
-    .offer-row-2 h4{
-        top: 15%;
-    }
-    .offer-row-2>p{
-        top: 5%;
-    }
     .offer-row-3{
         height: 51%;
-    }
-    .choose-btn{
-        height: 45%;
     }
     #circles-9{
         height: 70px;
@@ -310,7 +305,7 @@
         height: 25%;
         line-height: 50px;
     }
-    #page-row-4-recommended{
+    #packages-recommended{
         width: 14%;
     }
     #circles-11{
@@ -326,12 +321,12 @@
     #loginBtn{
         margin-left: -15%;
     }
-    .page-row-3-card p{
+    .about-card p{
         font-size: calc(0.45vw + 8px);
         padding-top: 3%;
         line-height: 1.5;
     }
-    #page-row-4{
+    #packages{
         max-height: 850px;
         min-height: 849px;
     }
@@ -420,10 +415,10 @@
         height: 100%;
         width: 21.5vw;
     }
-    #page-row-3{
+    #about{
         height: 182vw;
     }
-    #page-row-3-conteiner{
+    #about-conteiner{
         width: 95vw;
         height: 173vw;
     }
@@ -444,7 +439,6 @@
         margin-top: 140vw;
     }
     .choose-btn{
-        padding: 2% 0;
     }
     #page-row-5{
         height: 30vh;
@@ -543,7 +537,7 @@
     }
 }
 @media (max-width: 700px){
-    #page-row-4{
+    #packages{
         height: 100vh;
         min-height: 770px;
     }
@@ -556,9 +550,6 @@
     }
     .offer-row-2{
         height: 15%;
-    }
-    .offer-row-2 h4{
-        top: 5%;
     }
     .offer-row-2 p{
         top: -5%;
@@ -590,9 +581,9 @@
     }
     .page-row-2-card{
         width: 100%;
-        height: 24%;
+        height: 23%;
         display: flex;
-        margin-bottom: 1%;
+        margin-bottom: 2%;
     }
     .page-row-2-card-icon{
         width: 25%;
@@ -620,6 +611,7 @@
     .page-row-2-card-text{
         width: 50%;
         height: 100%;
+        margin-left: 6%;
     }
     .page-row-2-card-text h6{
         font-size: calc(0.5vw + 12px);
@@ -629,21 +621,6 @@
         margin: 3% 5%;
         color: var(--color-gray-dark);
         font-size: calc(0.45vw + 10px);
-    }
-    .page-row-2-card-button{
-        width: 25%;
-        height: 100%;
-    }
-    .page-row-2-card-button div i{
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: calc(1vw + 18px);
-    }
-    .page-row-2-card-button div{
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
     #circles-5{
         display: none;

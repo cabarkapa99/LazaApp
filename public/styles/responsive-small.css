@@ -20,52 +20,88 @@
         font-size: calc(0.5vw + 12px);
         margin: 5% 0 0 5%;
     }
-    #page-row-3{
+    #about{
         width: 100%;
-        height: 300vw;
+        height: 360vw;
         border-top: 1px solid var(--color-gray-little-darker);
     }
-    #page-row-3-conteiner{
+    #about-conteiner{
         width: 80vw;
-        height: 290vw;
+        height: 350vw;
         margin: auto;
     }
-    .page-row-3-card{
+    .about-card{
         width: 100%;
         height: 25%;
         display: block;
     }
-    .page-row-3-card-text{
+    .about-card-text{
         width: 100%;
-        height: 30%;
+        height: 25%;
         position: relative;
     }
-    .page-row-3-card-picture{
+    .about-card-text-inside{
         width: 100%;
-        height: 70%;
-        position: relative;
-        background-color: brown;
+        margin: 0;
     }
-    .page-row-3-card-picture-inside-div-right, .page-row-3-card-picture-inside-div-left{
+    .about-card h3{
+        font-size: calc(2.5vw + 18px);
+        text-align: center;
+    }
+    .about-card p{
+        font-size: calc(0.5vw + 10px);
+        text-align: center;
+        padding-top: 0%;
+    }
+    .about-card-picture{
+        width: 100%;
+        height: 75%;
+        position: relative;
+    }
+    .about-card-picture-inside-div-right, .about-card-picture-inside-div-left{
         margin: auto;
     }
-    #page-row-4{
+    .about-card-picture-pills-left{
+        left: 0;
+    }
+    .about-card-picture-pill-1{
+        width: 35%;
+        height: 100%;
+        top: -2%;
+        left: 20%;
+    }
+    .about-card-picture-pill-2{
+        width: 35%;
+        height: 70%;
+        top: -7%;
+        left: 18%;
+        display: inline-block;
+    }
+    .page-row-2-card-for-replace-1{
+        position: relative;
+        top: 25%;
+    }
+    .page-row-2-card-for-replace-2{
+        position: relative;
+        top: -75%;
+    }
+    #packages{
         height: 90vh;
         min-height: 700px;
     }
     #circles-3{
         display: none;
     }
-    #page-row-4{
+    #packages{
         min-height: 1100px;
     }
-    #page-row-4 h2{
+    #packages h2{
         top: 4%;
     }
-    #page-row-4 h5{
+    #packages h5{
         top: 5%;
     }
-    #page-row-4-recommended{
+    #packages-recommended{
         top: 36%;
         width: 22%;
     }
@@ -97,11 +133,11 @@
         border-radius: 10px 0px 0 0;
     }
     .offer-row-1 h6{
-        top: 10%;
-        font-size: calc(0.80vw + 12px);
+        top: 25%;
+        font-size: calc(0.80vw + 14px);
     }
     .offer-row-1 p{
-        top: 10%;
+        top: 20%;
         font-size: calc(0.45vw + 10px);
     }
     .offer-row-2{
@@ -127,7 +163,6 @@
         border: none;
     }
     .offer-row-3 ul{
-        top: 0%;
         display: flex;
     }
     .offer-row-3 ul div{
@@ -146,6 +181,8 @@
         margin-left: 10%;
         display: block;
         font-size: calc(1vw + 8px);
+        font-weight: light;
+        font-weight: 500;
     }
     .offer-row-4{
         width: 100%;
@@ -156,11 +193,17 @@
     }
     .choose-btn{
         width: 70%;
-        height: 70%;
         margin: auto;
         top: 40%;
-        padding: 0.3% 0;
+        padding: 1% 0;
         font-size: calc(0.6vw + 12px);
+    }
+    #circles-11{
+        height: 40px;
+        width: 40px;
+        margin-top: 28vw;
+        background-image:  
+          url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='20'> <rect width='3' height='2' fill='rgb(96, 91, 227)' /><circle cx='4' cy='4' r='2.5' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
     }
 }
 @media (max-width: 550px){
@@ -176,4 +219,133 @@
     #circles-1{
         display: none;
     }
+    #page-row-5-try-free{
+        display: block;
+    }
+    #page-row-5-try-free h4{
+        text-align: center;
+        top: 35%;
+    }
+    #page-row-5-try-free-Btn{
+        top: 15%;
+        margin: auto;
+        width: 30%;
+        height: 35px;
+        padding: 0%;
+        line-height: 35px;
+    }
 }
+@media (max-width: 500px){
+    #hero-try-free{
+        top: 40%;
+    }
+    .choose-btn{
+    }
+    #circles-11{
+        margin-top: 35vw; }
+}
+@media (max-width: 450px){
+    #hero{
+        min-height: 550px;
+        height: 70vh;
+    }
+    #hero h1{
+        top: 23%;
+        font-size: calc(2vw + 22px);
+    }
+    #hero-try-free-Btn{
+        font-size: calc(0.5vw + 12px);
+    }
+    #page-row-2{
+        min-height: 750px;
+        height: 100vh;
+    }
+    #page-row-2 h2{
+        top: 21%;
+    }
+    #page-row-2 h5{
+        top: 22%;
+    }
+    #page-row-2-cards{
+        height: 62%;
+        top: 28%;
+    }
+    .page-row-2-card-text{
+        width: 90%;
+    }
+    .page-row-2-card-text h6{
+        font-size: calc(0.7vw + 12px);
+    }
+    .page-row-2-card-text p{
+        font-size: calc(0.9vw + 10px);
+        margin: 1% 10% 0% 0%;
+    }
+    .offer-row-3 ul{
+        top: 5%;
+    }
+    .choose-btn{
+    }
+}
+@media (max-width: 425px){
+    #pricelist{
+        width: 90%;
+    }
+    #page-row-5-try-free-Btn{
+        top: 15%;
+        margin: auto;
+        width: 30%;
+        height: 35px;
+        padding: 0%;
+        line-height: 35px;
+    }
+}
+@media (max-width: 400px){
+    #page-row-2-cards{
+        display: block;
+        top: 30%;
+        width: 85%;
+        height: 60%;
+        margin: auto;
+    }
+    #packages-recommended{
+        width: 25%;
+    }
+    #packages{
+        min-height: 1050px;
+    }
+    #pricelist ul{
+        top: 0;
+    }
+    #page-row-5-try-free-Btn{
+        width: 35%;
+    }
+    #page-row-5-try-free-Btn{
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 350px){
+    #hero-slider{
+        height: 43%;
+    }
+    .page-row-2-card-text p{
+        font-size: calc(0.9vw + 9px);
+    }
+    #pricelist ul{
+        top: 5%;
+    }
+    #about-conteiner{
+        width: 85vw;
+    }
+    #packages{
+        min-height: 1000px;
+    }
+}
+@media (max-width: 325px){
+    #hero-try-free{
+        width: 65%;
+        left: 17.5%;
+    }
+}
+
+
