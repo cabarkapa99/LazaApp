@@ -238,7 +238,6 @@
     }
 }
 @media (max-width: 500px){
-
     #hero-try-free{
         top: 40%;
     }
@@ -261,7 +260,7 @@
         font-size: calc(0.5vw + 12px);
     }
     #page-row-2{
-        min-height: 500px;
+        min-height: 750px;
         height: 100vh;
     }
     #page-row-2 h2{
@@ -281,7 +280,7 @@
         font-size: calc(0.7vw + 12px);
     }
     .page-row-2-card-text p{
-        font-size: calc(0.5vw + 12px);
+        font-size: calc(0.9vw + 10px);
         margin: 1% 10% 0% 0%;
     }
     .offer-row-3 ul{
@@ -289,6 +288,70 @@
     }
     .choose-btn{
         padding: 1% 0;
+    }
+}
+@media (max-width: 425px){
+    #pricelist{
+        width: 90%;
+    }
+    #page-row-5-try-free-Btn{
+        top: 15%;
+        margin: auto;
+        width: 30%;
+        height: 35px;
+        padding: 0%;
+        line-height: 35px;
+    }
+}
+@media (max-width: 400px){
+    #page-row-2-cards{
+        display: block;
+        top: 30%;
+        width: 85%;
+        height: 60%;
+        margin: auto;
+    }
+    #packages-recommended{
+        width: 25%;
+    }
+    #packages{
+        min-height: 1050px;
+    }
+    #pricelist ul{
+        top: 0;
+    }
+    .choose-btn{
+        padding: 0.8% 0;
+    }
+    #page-row-5-try-free-Btn{
+        width: 35%;
+    }
+    #page-row-5-try-free-Btn{
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 350px){
+    #hero-slider{
+        height: 43%;
+    }
+    .page-row-2-card-text p{
+        font-size: calc(0.9vw + 9px);
+    }
+    #pricelist ul{
+        top: 5%;
+    }
+    #about-conteiner{
+        width: 85vw;
+    }
+    #packages{
+        min-height: 1000px;
+    }
+}
+@media (max-width: 325px){
+    #hero-try-free{
+        width: 65%;
+        left: 17.5%;
     }
 }
 
