@@ -924,11 +924,10 @@ button{
 }
 .choose-btn{
     width: 70%;
-    height: 40%;
     margin: auto;
     text-align: center;
     border: 2px solid var(--color-blue-1);
-    padding: 2.1% 0;
+    padding: 3% 0;
     border-radius: 5px;
     color: var(--color-blue-1);
     font-weight: 500;

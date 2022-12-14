@@ -172,7 +172,6 @@
     }
     .offer-row-3 ul li{
         width: 75%;
-        margin-top: 2%;
     }
     .offer-row-3 i{
         font-size: calc(1vw + 12px);
@@ -194,10 +193,9 @@
     }
     .choose-btn{
         width: 70%;
-        height: 70%;
         margin: auto;
         top: 40%;
-        padding: 0.4% 0;
+        padding: 1% 0;
         font-size: calc(0.6vw + 12px);
     }
     #circles-11{
@@ -242,7 +240,6 @@
         top: 40%;
     }
     .choose-btn{
-        padding: 0.8% 0;
     }
     #circles-11{
         margin-top: 35vw; }
@@ -287,7 +284,6 @@
         top: 5%;
     }
     .choose-btn{
-        padding: 1% 0;
     }
 }
 @media (max-width: 425px){
