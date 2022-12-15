@@ -89,6 +89,7 @@ const openList = function(){
     line1.classList.add('white');
     line3.classList.add('white');
     languageCard.style.display = 'block';
+    loginFormOutside.style.display = 'block';
     clicked = true;
 }
 const closeList = function(){
@@ -107,6 +108,7 @@ const closeList = function(){
         line1.classList.remove('white');
         line3.classList.remove('white');
         languageCard.style.display = 'none';
+        loginFormOutside.style.display = 'none';
     }, 320);
     clicked = false;
 }
