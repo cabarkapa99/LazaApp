@@ -207,6 +207,12 @@
     }
 }
 @media (max-width: 550px){
+    #burger{
+        right: 30px;
+    }
+    #language-card{
+        width: 12%;
+    }
     #hero{
         min-height: 600px;
         height: 85vh;
@@ -287,6 +293,9 @@
     }
 }
 @media (max-width: 425px){
+    #language-card{
+        width: 15%;
+    }
     #pricelist{
         width: 90%;
     }
@@ -300,6 +309,9 @@
     }
 }
 @media (max-width: 400px){
+    #burger{
+        right: 20px;
+    }
     #page-row-2-cards{
         display: block;
         top: 30%;
@@ -325,6 +337,9 @@
 }
 
 @media (max-width: 350px){
+    #burger{
+        right: 15px;
+    }
     #hero-slider{
         height: 43%;
     }

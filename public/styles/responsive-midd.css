@@ -391,19 +391,19 @@
         margin: 0;
     }
     #nav-list li{
-        height: 16.67%;
-        border-bottom: 1px solid var(--color-light-gray);
+        height: 22.5%;
         cursor: pointer;
         display: block;
+        text-align: center;
     }
     #nav-list li:first-child{
-        border-top: 1px solid var(--color-light-gray);
     }
     #nav-list li a{
         text-decoration: none;
-        font-size: calc(0.40vw + 18px);
+        font-size: calc(0.80vw + 18px);
         font-weight: 500;
         color: white;
+        margin: 0;
     }
     #hero-try-free{
         width: 45%;
@@ -453,28 +453,67 @@
         margin-left: 54%;
     }
     #logo{
-        width: 15%;
+        width: 150px;
+        left: 50px;
+    }
+    nav{
+        width: 82.5%;
     }
     #burger{
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    .block{
+        display: block;
+        z-index: 10;
     }
     #login-form-outside{
-        width: 25%;
+        display: none;
+        z-index: 5;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%,0);
     }
     #login-form-inside{
         margin: auto;
         border: none;
     }
     #loginBtn{
-        margin-left: -20%;
+        background-color: var(--color-white);
+        color: var(--color-blue-1);
+        border-radius: 6px;
+        border: 1.5px solid var(--color-gray-little-darker);
+        cursor: pointer;
+        font-size: calc(1vw + 8px);
     }
     #registerBtn{
+        font-size: calc(1vw + 8px);
+        padding: 6px 15%;
     }
     #language-card{
         display: none;
-        z-index: 10;
-    }
-    #language-card{
+        z-index: 5;
+        position: absolute;
+        left: 25px;
         width: 10%;
+    }
+    #language-card h5{
+        color: white;
+        font-size: calc(1vw + 6px);
+    }
+    #dropdown-arrow{
+        position: relative;
+        left: 10%;
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-size: cover;
+        background-color: var(--color-light-gray);
+        border-radius: 50%;
+        font-size: 1em;
     }
     .login-card, .register-card{
         width: 320px;
