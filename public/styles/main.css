@@ -188,7 +188,7 @@ nav ul li a:hover{
     background-size: cover;
     background-color: var(--color-light-gray);
     border-radius: 50%;
-    font-size: 0.8em;
+    font-size: 0.8;
 }
 .height-0{
     height: 0px;
@@ -924,11 +924,10 @@ button{
 }
 .choose-btn{
     width: 70%;
-    height: 40%;
     margin: auto;
     text-align: center;
     border: 2px solid var(--color-blue-1);
-    padding: 2.1% 0;
+    padding: 3% 0;
     border-radius: 5px;
     color: var(--color-blue-1);
     font-weight: 500;
