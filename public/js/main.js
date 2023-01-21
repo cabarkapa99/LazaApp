@@ -91,6 +91,7 @@ const openList = function(){
     languageCard.style.display = 'block';
     loginFormOutside.style.display = 'block';
     clicked = true;
+    /*toogle*/
 }
 const closeList = function(){
     line1.style.transform = "rotate(0deg)";
