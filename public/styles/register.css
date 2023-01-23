@@ -11,6 +11,19 @@
     left: 5%;
     font-size: 18px;
 }
+#burger{
+    display: none;
+    width: 50px;
+}
+#logo{
+    width: 10%;
+}
+#nav{
+    width: 80%;
+}
+#nav ul{
+    margin: auto;
+}
 .login-register-cards1{
     width: 100%;
     height: 100%;
@@ -44,4 +57,102 @@
 }
 .login-form input.control::placeholder, .register-form input.control::placeholder{
     color: rgb(152, 158, 149);
+}
+@media (max-width: 768px){
+    #logo{
+        width: 150px;
+    }
+    #burger{
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        transform: translate(0, -50%);
+        display: block;
+        height: 30px;
+        width: 30px;
+        display: block;
+    }
+    .height-0-850px{
+        height: 0;
+    }
+    .height-300{
+        height: 300px;
+    }
+    .margin-58{
+        margin-left: 62%;
+    }
+    .margin-48{
+        margin-left: 48%;
+    }
+    .white{
+        background-color: white;
+    }
+    .nav-clicked{
+        position: absolute;
+        width: 100vw;
+        background-color: rgb(96, 91, 227);
+        transition: 0s;
+    }
+    #nav{
+        width: 100%;
+    }
+    nav{
+        z-index: 1;
+        position: relative;
+    }
+    #nav-list{
+        clear: both;
+        width: 100vw;
+        overflow: hidden;
+        text-align: center;
+        transition: height .4s ease;
+        position: absolute;
+        display: block;
+        z-index: 1;
+        background-color: rgb(96, 91, 227);
+        top: 90px;
+        margin: 0;
+    }
+    #nav-list li{
+        height: 22.5%;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+    }
+    #nav-list li:first-child{
+    }
+    #nav-list li a{
+        text-decoration: none;
+        font-size: calc(0.80vw + 18px);
+        font-weight: 500;
+        color: white;
+        margin: 0;
+    }
+}
+@media (max-width: 500px){ 
+    .login-card, .register-card{
+        width: 350px;
+        padding: 80px 30px 44px;
+    }
+    .wrong-value-div{
+        font-size: 15px;
+    }
+}
+@media (max-width: 375px){  
+    .login-card, .register-card{
+        width: 310px;
+        padding: 75px 30px 34px;
+    }
+    .wrong-value-div{
+        font-size: 14px;
+    }
+}
+@media (max-width: 310px){  
+    .login-card, .register-card{
+        width: 250px;
+        padding: 65px 15px 24px;
+    }
+    .wrong-value-div{
+        font-size: 11px;
+    }
 }

@@ -104,3 +104,58 @@ function RegisterFormProcessing(ev){
         wrongValueDivReg.textContent = '';
     }
 }
+const line1 = document.getElementById('line1');
+const line2 = document.getElementById('line2');
+const line3 = document.getElementById('line3');
+const hamburger = document.getElementById('burger');
+const logo = document.getElementById('logo');
+const list = document.getElementById('nav-list');
+const nav = document.getElementById('nav');
+const loginFormOutside = document.getElementById('login-form-outside');
+const loginRegisterCards = document.getElementById('login-register-cards1');
+
+const openList = function(){
+    line1.style.transform = "rotate(45deg)";
+    line2.style.transform = "scaleY(0)";
+    line3.style.transform = "rotate(-45deg)";
+    list.classList.remove('height-0-850px');
+    list.classList.add('height-300');
+    logo.classList.add('none');
+    hamburger.classList.add('margin-48');
+    hamburger.classList.remove('margin-58');
+    nav.classList.add('nav-clicked');
+    line1.classList.add('white');
+    line3.classList.add('white');
+    clicked = true;
+}
+const closeList = function(){
+    line1.style.transform = "rotate(0deg)";
+    line2.style.transform = "scaleY(1)";
+    line3.style.transform = "rotate(0deg)";
+    list.classList.add('height-0-850px');
+    list.classList.remove('height-300');
+    setTimeout(function(){
+        logo.classList.remove('none');
+        hamburger.classList.remove('burger-margin-left');
+        hamburger.classList.add('margin-58');
+        hamburger.classList.remove('margin-48');
+        nav.classList.remove('nav-clicked');
+        line1.classList.remove('white');
+        line3.classList.remove('white');
+    }, 320);
+    clicked = false;
+}
+let clicked = false;
+
+hamburger.addEventListener('click', function(){
+    if(clicked === false){
+        openList();
+    }else{
+        closeList();
+    }
+});
+
+list.addEventListener('click', function(){
+    if(clicked === true)
+        closeList();
+});
