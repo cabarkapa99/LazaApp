@@ -5,9 +5,11 @@
     --color-light-gray: rgb(248, 248, 248);
     --color-gray-little-darker: rgb(199, 204, 196);
     --color-gray-dark: rgb(110, 110, 110);
+    --color-gray-dark-2: rgba(106, 115, 131);
     --color-blue-1: rgb(96, 91, 227);
     --color-blue-2: rgb(30, 27, 195);
     --color-blue-3: rgb(20, 18, 150);
+    --color-blue-4: rgb(26, 36, 54);
     --color-yellow: rgb(255, 186, 1);
 }
 *{
@@ -1010,3 +1012,311 @@ button{
     box-shadow: inset -3px -3px 12px rgb(255, 249, 249), inset 3px 3px 8px rgb(124, 119, 119);
     transition: 0.1s;
 }
+
+.clients{
+    width: 100%;
+    height: 55vh;
+    background-color: var(--color-light-gray);
+    border-style: solid;
+    border-color: var(--color-gray-little-darker);
+    border-width: 0 0 1px 0;
+}
+
+.clients img{
+    margin-left: 44%;
+    margin-top: 5%;
+    height: 70px;
+}
+
+.clients h2{
+    text-align: center;
+    padding-top: 5%;
+    font-size: calc(1.7vw + 18px);
+}
+#circles-12{
+    height: 100px;
+    width: 170px;
+    background-image:  
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+    position: absolute;
+    margin-left: 88vw;
+    margin-top: 5vw;
+}
+
+#circles-13{
+    height: 100px;
+    width: 170px;
+    background-image:  
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+    position: absolute;
+    margin-right: 88vw;
+    margin-top: 18vw;
+}
+
+.faq{
+    text-align: center;
+    margin: 140px 20% 140px 20%;
+}
+
+#circles-14{
+    height: 100px;
+    width: 170px;
+    background-image:  
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");  
+    position: absolute;
+    margin-left: 73.5vw;
+    margin-top: 5vw;
+    z-index: -1;
+}
+
+#circles-15{
+    height: 100px;
+    width: 170px;
+    background-image:  
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+    position: absolute;
+    margin-right: 90vw;
+    margin-top: 25vw;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.question-container{
+    background-color: var(--color-white);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--color-gray-little-darker);
+    border-radius: 5px;
+    margin: 10px 10px 10px 10px;
+    display: block;
+    animation: fade 1s ease-in-out;
+}
+
+.question-container:hover{
+    background-color: var(--color-blue-1);
+    transition: 0.3s  ease-out;
+    color: white;
+}
+
+.question-container:hover .arrow{
+    border-left-color: rgb(199, 204, 196, 0.4);
+}
+
+.question-container:hover .arrow .fa-angle-down{
+    background-color: rgb(255, 255, 255, 0.4);
+}
+
+.question-container:hover .answer{
+    border-color: rgb(199, 204, 196, 0.4);
+}
+
+.question{
+    width: 88%;
+    background-color: rgba(255, 255, 255, 0);
+    padding-left: 15px;
+    text-align: left;
+    display: inline-block;
+}
+
+.arrow{
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0);
+    border-left-style: solid;
+    border-left-color: var(--color-gray-little-darker);
+    border-left-width: 0.1px;
+    margin-left: 5%;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.fa-angle-down{
+    color: white;
+    border-radius: 100%;
+    background-color: var(--color-blue-1);
+    border-width: 0.1px;
+    padding: 1px 5px 1px 5px;
+    transition: transform 0.5s ease-in;
+}
+
+.rotate-arrow {
+    transition: 0.5s;
+    transform: rotate(180deg);
+}
+
+.faq-heading{
+    padding-bottom: 30px;
+}
+
+.faq h2{
+    padding-bottom: 10px;
+    font-size: calc(1.7vw + 18px);
+}
+
+.faq-heading span{
+    font-size: calc(0.5vw + 10px);
+    font-weight: 700;
+}
+
+.answer{
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding: 50px 150px 50px 150px;
+    background-color: rgba(255, 255, 255, 0);
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    border-color: var(--color-gray-little-darker);
+    border-radius: 0 0 5px 5px;
+    animation: fade 1s ease-in-out;
+}
+
+.answer p{
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 20px;
+}
+
+.hidden{
+    display: none;
+}
+.footer-container{
+    background-color: var(--color-blue-4);
+    padding-bottom: 64px;
+    padding-top: 64px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-width: 15px 0 0 0;
+    border-style: solid;
+    border-color: var(--color-blue-1);
+    align-items: center;
+}
+
+.footer{
+    width: 80%;
+    height: 40%;
+    background-color: var(--color-blue-4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 10% 30px 10%;
+    align-items: center;
+}
+
+.footer-heading{
+    background-color: var(--color-blue-4);
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+    height: 300px;
+}
+
+.footer-3 {
+    margin-right: 150px;
+}
+
+.footer-3 p{
+    background-color: var(--color-blue-4);
+    color: var(--color-gray-dark-2);
+}
+
+.footer-3 input{
+    width: 120px;
+    height: 30px;
+    border-color: var(--color-blue-1);
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: var(--color-blue-4);
+    color: white;
+}
+
+.footer-3 input:hover{
+    background-color: var(--color-blue-1);
+    box-shadow: inset -2px -2px 8px #9d96af, inset 2px 2px 5px #0d0427
+}
+
+.footer-3 input:active{
+    box-shadow: inset -2px -2px 8px #9d96af, inset 2px 2px 5px #0d0427
+}
+
+.footer-heading h4{
+    background-color: var(--color-blue-4);
+    margin-bottom: 32px;
+}
+
+.footer-heading a{
+    background-color: var(--color-blue-4);
+    color: var(--color-gray-dark-2);
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.footer-heading i{
+    background-color: var(--color-blue-4);
+    color: var(--color-white);
+    padding: 10px;
+    font-size: 25px;
+}
+
+.footer-heading i:hover{
+    color: var(--color-blue-1);
+    border-color: var(--color-blue-1);
+    transition: 0.3s ease-out;
+}
+
+.footer-heading a:hover {
+    color: var(--color-blue-1);
+    transition: 0.3s ease-out;
+}
+
+.footer-1{
+    display: inline-block;
+}
+
+.footer-1 p{
+    background-color: var(--color-blue-4);
+    color: var(--color-gray-dark-2);
+    padding-bottom: 8px;
+}
+
+.logo {
+    margin-bottom: 20px;
+    background-color: var(--color-blue-4);
+    
+}
+
+.logo img{
+    padding-bottom: 8px;
+    background-color: var(--color-blue-4);
+    height: 150px;
+    width: 300px;
+}
+
+#circles-16{
+    height: 100px;
+    width: 170px;
+    background-image:  
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(26, 36, 54)' /><circle cx='5' cy='5' r='4' fill='rgba(45, 56, 75)' shape-rendering='geometricPrecision'/></svg>");  
+    position: absolute;
+    margin-left: 88vw;
+    margin-top: 15vw;
+}
+
+#circles-17{
+    height: 100px;
+    width: 170px;
+    background-image:  
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(26, 36, 54)' /><circle cx='5' cy='5' r='4' fill='rgba(46, 56, 75)' shape-rendering='geometricPrecision'/></svg>");  
+    position: absolute;
+    margin-left: 88vw;
+    margin-top: 23vw;
+}
+
