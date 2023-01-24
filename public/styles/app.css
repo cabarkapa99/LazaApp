@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color-white: rgb(255,255,255);
+    --color-black: rgb(0,0,0);
+    --color-light-black: rgb(55,55,55);
+    --color-light-gray: rgb(248, 248, 248);
+    --color-gray-little-darker: rgb(199, 204, 196);
+    --color-gray-dark: rgb(110, 110, 110);
+    --color-blue-1: rgb(96, 91, 227);
+    --color-blue-2: rgb(30, 27, 195);
+    --color-blue-3: rgb(20, 18, 150);
+    --color-yellow: rgb(255, 186, 1);
+    --proba: #f7effa;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+nav{
+    width: 20%;
+    height: 70%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(240, 240, 240);
+    border-radius: 0 50px 0 0;
+}
+nav ul{
+    width: 100%;
+    height: 100%;
+}
+nav li{
+    width: 100%;
+    height: 10%;
+    position: relative;
+    top: 10%;
+    transition: all .4s;
+}
+nav ul li a{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: inline-block;
+    text-align: center;
+    color: var(--color-black);
+    font-size: 1.3vw;
+    display: flex;
+    transition: all .4s;
+}
+nav a:hover{
+    color: var(--color-blue-1);
+}
+nav i{
+    position: relative;
+    height: 50%;
+    top: 50%;
+    left: 25%;
+    transform: translate(0, -50%);
+    display: inline-block;
+}
+nav p{
+    left: 30%;
+    position: relative;
+    height: 50%;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: inline-block;
+}
+#name{
+    width: 20%;
+    height: 30%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--color-blue-1);
+    border-radius: 0 0 50px 0;
+}
+#name img{
+    background-color: var(--color-white);
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 60%;
+    left: 10%;
+    border-radius: 500px;
+}
+#name h5{
+    color: var(--color-white);
+    font-size: 2vw;
+    position: relative;
+    top: 10%;
+    display: inline-block;
+}
+#name p{
+    color: var(--color-white);
+    position: relative;
+    top: 40%;
+    left: 30%;
+    font-size: .8vw;
+}
+#dashboard{
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    left: 20%;
+    top: 0;
+}
+#notifications{
+    width: 20%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    right: 0;
+    border-left: 1px solid var(--color-gray-little-darker);
+}
+.li-clicked{
+    background-color: rgb(240, 240, 240);
+    border-radius: 0 40px 0 0;
+}
+.li-clicked1{
+    background-color: var(--color-white);
+}
+.li-clicked2{
+    background-color: rgb(240, 240, 240);
+    border-radius: 0 0 40px 0;
+}
