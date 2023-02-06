@@ -13,6 +13,7 @@
     --color-blue-2: rgb(30, 27, 195);
     --color-blue-3: rgb(20, 18, 150);
     --color-blue-4: rgb(231, 230, 248);
+    --color-blue-5: rgb(176, 182, 253);
     --color-yellow: rgb(255, 186, 1);
     --proba: #f7effa;
 }
@@ -241,6 +242,60 @@ body{
     z-index: 3;
     color: var(--color-blue-1);
 }
+#notifications-checkbox{
+    width: 90%;
+    height: 25%;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    border-radius: 20px;
+}
+.notifications-form{
+    display: flex;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    justify-content: space-around;
+}
+#notifications-checkbox-coll-1{
+}
+#notifications-checkbox-coll-2{
+}
+  .form-control {
+    font-size: calc(0.5vw + 6px);
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+  }
+  .form-control + .form-control {
+    margin-top: 1em;
+  }
+  
+  input[type="checkbox"] {
+    appearance: none;
+    background-color: var(--color-white);
+    font: inherit;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--color-blue-1);
+  }
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
 #statistics-conteiner{
     display: flex;
     width: 85%;
@@ -253,7 +308,7 @@ body{
 .statistics{
     width: calc(60px + 10vw);
     height: calc(125px + 4vw);
-    background-color: var(--color-blue-1);
+    background-color: var(--color-blue-5);
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
@@ -262,25 +317,30 @@ body{
     justify-content: space-evenly;
     box-shadow: -5px -5px 10px rgb(255 255 255 / 80%), 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
+.statistics:nth-child(2){
+    background-color: var(--color-white);
+}
 #statistics-column-name{
     position: absolute;
     top: 5%;
     font-size: 1.1vw;
-    color: var(--color-white);
+    color: var(--color-light-black);
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-}
-#statistics-column-name p{
+    font-weight: 549;
 }
 .statistics-line{
     width: 12%;
-    background-color: var(--color-yellow);
+    background-color: var(--color-white);
     position: relative;
-    color: var(--color-white);
+    color: var(--color-light-black);
     font-size: 1.1vw;
-    font-weight: bold;
+    font-weight: 540;
     border-radius: 10px 10px 0 0;
+}
+.statistics:nth-child(2) .statistics-line{
+    background-color: var(--color-blue-5);
 }
 .statistics-line p{
     text-align: center;
@@ -318,7 +378,7 @@ body{
     height: 50%;
     position: relative;
     left: 10%;
-    top: 40%;
+    top: 15%;
 }
 .notification{
     width: 100%;

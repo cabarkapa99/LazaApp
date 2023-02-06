@@ -6,6 +6,9 @@
     #statistics-column-name{
         font-size: calc(1.1vw + 2px);
     }
+    .form-control {
+        font-size: 12px;
+      }
     #notifications-conteiner{
         width: 90%;
         left: 5%;
@@ -119,6 +122,9 @@
     }
 }
 @media (max-width: 850px){
+    .li-clicked3{
+        background-color: var(--color-white);
+    }
     .translate-150{
         transform: translate(-150%);
     }
@@ -162,6 +168,9 @@
     }
 }
 @media (max-width: 600px){
+    #name p{
+        padding-left: 2%;
+    }
     #statistics-column-name{
         font-size: calc(1.5vw + 5px);
     }
@@ -206,6 +215,9 @@
         height: 100%;
         top: 0;
     }
+    .form-control {
+        font-size: 15px;
+      }
     #left-side{
         width: 50%;
     }
