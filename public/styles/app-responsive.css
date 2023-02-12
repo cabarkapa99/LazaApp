@@ -68,7 +68,6 @@
         height: calc(80px + 6vw);
     }
     #main-buttons{
-        min-width: 480px;
         position: relative;
         left: calc(25vw - 270px);
         top: 35%;
@@ -114,7 +113,6 @@
         min-width: 0;
         left: 0;
         margin: auto;
-        width: 80%;
     }
     .main-button{
         width: 220px;
@@ -179,16 +177,12 @@
         font-size: calc(1.5vw + 5px);
     }
     .main-button{
-        width: 45%;
-        height: 80%;
     }
 }
-@media (max-width: 550px){
-    #main-buttons{
-        min-width: 0;
-        left: 0;
-        margin: auto;
-        width: 90%;
+@media (max-width: 550px){   
+    .main-button{
+        width: 45vw;
+        height: 200px;
     }
 }
 @media (max-width: 500px){
@@ -204,7 +198,7 @@
         width: calc(55px + 24vw);
     }
     #statistics-column-name{
-        font-size: calc(1.8vw + 6px);
+        font-size: calc(1.8vw + 4px);
     }
     .statistics-line{
         width: 14%;
@@ -226,14 +220,6 @@
     #statistics-conteiner{
         top: 12%;
     }
-    #main-buttons{
-        width: 95%;
-        height: 50%;
-        top: 40%;
-    }
-    .main-button-text{
-        top: 15%;
-    }
 }
 @media (max-width: 425px){
     #statistics{
@@ -241,30 +227,38 @@
         width: 33%;
     }
     #main-buttons{
-        height: 50%;
-        width: 100%;
-        top: 42%;
+        top: 40%;
     }
-    .main-button-text{
-        top: 12%;
-    }
-    .plus{
-        top: 18%;
+    .main-button{
+        width: 45vw;
+        height: 180px;
     }
 }
 @media (max-width: 375px){
+    #statistics-conteiner{
+        top: 20%;
+    }
     #main-buttons{
-        top: 38%;
+        top: 50%;
+    }
+    .main-button{
+        width: 45vw;
+        height: 160px;
     }
 }
 @media (max-width: 350px){
     #statistics-conteiner{
         width: 90%;
+        margin-left: 5%;
     }
     #statistics{
         top: 13%;
     }
     #main-buttons{
-        height: 45%;
+        top: 45%;
+    }
+    .main-button{
+        width: 45vw;
+        height: 150px;
     }
 }

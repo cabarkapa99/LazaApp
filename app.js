@@ -1,17 +1,21 @@
 const express = require('express');
 const path = require('path');
 
+const djordjeRouter = require('./routers/djordje')
+
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/incomeApp', 
-{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+//mongoose.connect('mongodb://localhost:27017/incomeApp', 
+//{
+    //useNewUrlParser: true,
+    //useUnifiedTopology: true
+//});
 
 // const routerPrihodi = require('./routers/prihodi');
 
 const app = express();
+
+app.use('/djordje', djordjeRouter);
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());

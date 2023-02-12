@@ -22,6 +22,56 @@ for(let i=1; i<navLis.length-1; i++){
     });
 }
 
+const studentBtn = document.getElementById('student-btn');
+const modals = document.getElementById('modals');
+const studentModal = document.getElementById('student-modal');
+const studentModalX = document.getElementById('student-modal-x');
+const instructorBtn = document.getElementById('instructor-btn');
+const instructorModal = document.getElementById('instructor-modal');
+const instructorModalX = document.getElementById('instructor-modal-x');
+const vehicleBtn = document.getElementById('vehicle-btn');
+const vehicleModal = document.getElementById('vehicle-modal');
+const vehicleModalX = document.getElementById('vehicle-modal-x');
+const aBtn = document.getElementById('a-btn');
+const aModal = document.getElementById('a-modal');
+const aModalX = document.getElementById('a-modal-x');
+
+studentBtn.addEventListener('click', (e)=>{
+    modals.classList.remove('hiden');
+    studentModal.classList.remove('hiden');
+})
+studentModalX.addEventListener('click', (e)=>{
+    modals.classList.add('hiden');
+    studentModal.classList.add('hiden');
+})
+
+instructorBtn.addEventListener('click', (e)=>{
+    modals.classList.remove('hiden');
+    instructorModal.classList.remove('hiden');
+})
+instructorModalX.addEventListener('click', (e)=>{
+    modals.classList.add('hiden');
+    instructorModal.classList.add('hiden');
+})
+
+vehicleBtn.addEventListener('click', (e)=>{
+    modals.classList.remove('hiden');
+    vehicleModal.classList.remove('hiden');
+})
+vehicleModalX.addEventListener('click', (e)=>{
+    modals.classList.add('hiden');
+    vehicleModal.classList.add('hiden');
+})
+
+aBtn.addEventListener('click', (e)=>{
+    modals.classList.remove('hiden');
+    aModal.classList.remove('hiden');
+})
+aModalX.addEventListener('click', (e)=>{
+    modals.classList.add('hiden');
+    aModal.classList.add('hiden');
+})
+
 
 const line1 = document.getElementById('line1');
 const line2 = document.getElementById('line2');

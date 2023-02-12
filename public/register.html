@@ -35,13 +35,13 @@
                     <div id="wrong-value-div" class="wrong-value-div"></div>
                     <h2>Prijavite se</h2>
                     <h3>Unesite Vase podatke</h3>
-                    <form class="login-form">
-                        <input class="control" type="text" placeholder="Username" id="username-login">
+                    <form class="login-form" action="/djordje" method="POST">
+                        <input class="control" type="text" placeholder="Username" id="username-login" name="username">
                         <div class="password">
-                            <input class="control" id="password-login" placeholder="Password">
+                            <input class="control" id="password-login" placeholder="Password" name="password" type="password">
                             <button class="toggle" type="button" onclick="togglePassword(this)"></button>
                         </div>
-                        <button class="control">LOGIN</button>
+                        <button type="submit" class="control">LOGIN</button>
                     </form>
                     <div id="create-new-account">Napravite novi nalog</div>
                 </div>

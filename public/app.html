@@ -40,89 +40,134 @@
             </div>
         </div>
         
+        <div id="modals" class="modals hiden">
+            <div id="student-modal" class="modal hiden">
+                <h3>Unesite podatke o učeniku</h3>
+                <div class="modal-x" id="student-modal-x">X</div>
+                <form class="modal-form">
+                    <input class="modal-form-input" type="text" placeholder="Ime" id="">
+                    <input class="modal-form-input" type="text" placeholder="Prezime" id="">
+                    <input class="modal-form-input" type="text" placeholder="Kategorija" id="" >
+                    <button class="modal-form-confirm-btn" type="submit">DODAJ</button>
+                </form>
+            </div>
+            <div id="instructor-modal" class="modal hiden">
+                <h3>Unesite podatke o instruktoru</h3>
+                <div class="modal-x" id="instructor-modal-x">X</div>
+                <form class="modal-form">
+                    <input class="modal-form-input" type="text" placeholder="Ime" id="">
+                    <input class="modal-form-input" type="text" placeholder="Prezime" id="">
+                    <input class="modal-form-input" type="text" placeholder="Kategorija" id="" >
+                    <button class="modal-form-confirm-btn">DODAJ</button>
+                </form>
+            </div>
+            <div id="vehicle-modal" class="modal hiden">
+                <h3>Unesite podatke o vozilu</h3>
+                <div class="modal-x" id="vehicle-modal-x">X</div>
+                <form class="modal-form">
+                    <input class="modal-form-input" type="text" placeholder="Marka" id="">
+                    <input class="modal-form-input" type="text" placeholder="Model" id="">
+                    <input class="modal-form-input" type="number" placeholder="Godiste" id="">
+                    <input class="modal-form-input" type="text" placeholder="Kategorija" id="" >
+                    <button class="modal-form-confirm-btn">DODAJ</button>
+                </form>
+            </div>
+            <div id="a-modal" class="modal hiden">
+                <h3>Unesite podatke o necemu</h3>
+                <div class="modal-x" id="a-modal-x">X</div>
+                <form class="modal-form">
+                    <input class="modal-form-input" type="text" placeholder="aaa" id="">
+                    <input class="modal-form-input" type="text" placeholder="bbb" id="">
+                    <input class="modal-form-input" type="text" placeholder="ccc" id="" >
+                    <button class="modal-form-confirm-btn">DODAJ</button>
+                </form>
+            </div>
+        </div>
         
         <div id="main">
-            <div id="statistics-conteiner">
-                <div class="statistics">
-                    <div id="statistics-column-name">
-                        <p>Učenici</p>
-                        <p>Predavači</p>
-                        <p>Vozila</p>
-                    </div>
-                    <div class="statistics-line" id="statistics-students">
-                        <p>15</p>
-                    </div>
-                    <div class="statistics-line" id="statistics-instructor">
-                        <p>35</p>
-                    </div>
-                    <div class="statistics-line" id="statistics-cars">
-                        <p>10</p>
-                    </div>
-                </div>
-                <div class="statistics none-500">
-                    <div id="statistics-column-name">
-                        <p>Učenici</p>
-                        <p>Predavači</p>
-                        <p>Vozila</p>
-                    </div>
-                    <div class="statistics-line" id="statistics-students">
-                        <p>15</p>
-                    </div>
-                    <div class="statistics-line" id="statistics-instructor">
-                        <p>35</p>
-                    </div>
-                    <div class="statistics-line" id="statistics-cars">
-                        <p>10</p>
-                    </div>
-                </div>
-                <div class="statistics">
-                    <div id="statistics-column-name">
-                        <p>Učenici</p>
-                        <p>Predavači</p>
-                        <p>Vozila</p>
-                    </div>
-                    <div class="statistics-line" id="statistics-students">
-                        <p>15</p>
-                    </div>
-                    <div class="statistics-line" id="statistics-instructor">
-                        <p>35</p>
-                    </div>
-                    <div class="statistics-line" id="statistics-cars">
-                        <p>10</p>
-                    </div>
-                </div>
-            </div>
-            <div id="main-buttons">
-                <div id="main-buttons-row-1">
-                    <div class="main-button">
-                        <p class="plus">+</p>
-                        <div class="main-button-text">
-                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                            <p>UČENIK</p>
+            <div id="main-inside">
+                <div id="statistics-conteiner">
+                    <div class="statistics">
+                        <div id="statistics-column-name">
+                            <p>Učenici</p>
+                            <p>Predavači</p>
+                            <p>Vozila</p>
+                        </div>
+                        <div class="statistics-line" id="statistics-students">
+                            <p>15</p>
+                        </div>
+                        <div class="statistics-line" id="statistics-instructor">
+                            <p>35</p>
+                        </div>
+                        <div class="statistics-line" id="statistics-cars">
+                            <p>10</p>
                         </div>
                     </div>
-                    <div class="main-button">
-                        <p class="plus">+</p>
-                        <div class="main-button-text">
-                            <i class="fa fa-user-o" aria-hidden="true"></i>
-                            <p>PREDAVAČ</p>
+                    <div class="statistics none-500">
+                        <div id="statistics-column-name">
+                            <p>Učenici</p>
+                            <p>Predavači</p>
+                            <p>Vozila</p>
+                        </div>
+                        <div class="statistics-line" id="statistics-students">
+                            <p>15</p>
+                        </div>
+                        <div class="statistics-line" id="statistics-instructor">
+                            <p>35</p>
+                        </div>
+                        <div class="statistics-line" id="statistics-cars">
+                            <p>10</p>
+                        </div>
+                    </div>
+                    <div class="statistics">
+                        <div id="statistics-column-name">
+                            <p>Učenici</p>
+                            <p>Predavači</p>
+                            <p>Vozila</p>
+                        </div>
+                        <div class="statistics-line" id="statistics-students">
+                            <p>15</p>
+                        </div>
+                        <div class="statistics-line" id="statistics-instructor">
+                            <p>35</p>
+                        </div>
+                        <div class="statistics-line" id="statistics-cars">
+                            <p>10</p>
                         </div>
                     </div>
                 </div>
-                
-                <div id="main-buttons-row-2">
-                    <div class="main-button">
-                        <p class="plus">+</p>
-                        <div class="main-button-text">
-                            <i class="fa fa-car" aria-hidden="true"></i>
-                            <p>VOZILO</p>
+                <div id="main-buttons">
+                    <div id="main-buttons-row-1">
+                        <div class="main-button" id="student-btn">
+                            <p class="plus">+</p>
+                            <div class="main-button-text">
+                                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                                <p>UČENIK</p>
+                            </div>
+                        </div>
+                        <div class="main-button" id="instructor-btn">
+                            <p class="plus">+</p>
+                            <div class="main-button-text">
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                                <p>PREDAVAČ</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="main-button">
-                        <p class="plus">+</p>
-                        <div class="main-button-text">
-                            <i class="fa fa-id-card-o" aria-hidden="true"></i>
-                            <p>NEŠTO</p>
+                    
+                    <div id="main-buttons-row-2">
+                        <div class="main-button" id="vehicle-btn">
+                            <p class="plus">+</p>
+                            <div class="main-button-text">
+                                <i class="fa fa-car" aria-hidden="true"></i>
+                                <p>VOZILO</p>
+                            </div>
+                        </div>
+                        <div class="main-button" id="a-btn">
+                            <p class="plus">+</p>
+                            <div class="main-button-text">
+                                <i class="fa fa-id-card-o" aria-hidden="true"></i>
+                                <p>NEŠTO</p>
+                            </div>
                         </div>
                     </div>
                 </div>
