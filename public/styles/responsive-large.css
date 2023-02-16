@@ -1,0 +1,289 @@
+@media  screen and (max-width: 2560px) {
+    #circles-12{
+        height: 130px;
+        width: 230px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'> <rect width='5' height='5' fill='rgb(248, 248, 248)' /><circle cx='6' cy='6' r='5' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        left: 91%;
+        top: 20%;
+    }
+    
+    #circles-13{
+        height: 130px;
+        width: 230px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'> <rect width='4' height='4' fill='rgb(248, 248, 248)' /><circle cx='6' cy='6' r='5' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        right: 90%;
+        top: 60%;
+    }
+
+    .clients{
+        height: 80vh;
+    }
+
+    .clients img{
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 2320px) {
+    #circles-12{
+        left: 90%;
+    }
+}
+
+@media screen and (max-width: 2083px) {
+    #circles-12{
+        left: 89%;
+    }
+
+    #circles-13{
+        right: 88%;
+    }
+
+    .clients{
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 1919px) {
+    #circles-12{
+        left: 88%;
+        top: 20%;
+    }
+
+    #circles-13{
+        right: 86%;
+    }
+}
+
+@media screen and (max-width: 1750px) {
+    #circles-12{
+        left: 87%;
+        top: 15%;
+    }
+
+    #circles-13{
+        right: 86%;
+    }
+}
+
+@media screen and (max-width: 1620px) {
+    #circles-12{
+        left: 86%;
+    }
+
+    #circles-13{
+        right: 85%;
+    }
+
+    .clients{
+        height: 60vh;
+    }
+}
+ 
+@media screen and (max-width: 1510px) {
+    #circles-12{
+        left: 85%;
+    }
+
+    #circles-13{
+        right: auto;
+    }
+
+    .clients img{
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 1420px) {
+    #circles-12{
+        left: 84%;
+    }
+
+    #circles-13{
+        top: 50%;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    #circles-12{
+        left: 83%;
+    }
+}
+
+@media screen and (max-width: 2560px) {
+    #circles-14{
+        height: 130px;
+        width: 230px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'> <rect width='4' height='4' fill='white' /><circle cx='6' cy='6' r='5' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");  
+        position: absolute;
+        left: 71%;
+        top: 28vh;
+        z-index: -1;
+    }
+    
+    #circles-15{
+        height: 130px;
+        width: 230px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'> <rect width='4' height='4' fill='white' /><circle cx='6' cy='6' r='5' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        right: 90%;
+        top: 67%;
+    }
+
+    .faq{
+        height: 100%;
+        width: 50%;
+    }
+
+    .question{
+        width: 95%;
+    }
+
+}
+
+@media screen and (max-width: 2325px) {
+    #circles-14{
+        top: 24vh;
+        left: 72%;
+    }
+
+    .faq{
+        width: 53%;
+    }
+}
+
+@media screen and (max-width: 2193px) {
+    .faq{
+        width: 54%;
+    }
+    
+    #circles-14{
+        left: 73%;
+    }
+
+    #circles-15{
+        right: 88%;
+    }
+}
+
+@media screen and (max-width: 2153px) {
+    .question{
+        width: 94%;
+    }
+}
+
+@media screen and (max-width: 1830px) {
+    #circles-14{
+        left: 72%;
+        top: 22vh;
+    }
+
+    #circles-15{
+        right: 86%;
+    }
+}
+
+@media screen and (max-width: 1795px) {
+    .question{
+        width: 93%;
+    }
+
+    #circles-14{
+        top: 36vh;
+    }
+}
+
+@media screen and (max-width: 1538px) {
+    .question{
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 1346px) {
+    .question{
+        width: 91%;
+    }
+
+    #circles-14{
+        top: 40vh;
+    }
+
+    #circles-15{
+        right: 82%;
+        top: 65%;
+    }
+}
+
+@media screen and (max-width: 2560px) {
+    #circles-16{
+        height: 130px;
+        width: 230px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'> <rect width='4' height='4' fill='rgb(26, 36, 54)' /><circle cx='6' cy='6' r='5' fill='rgba(45, 56, 75)' shape-rendering='geometricPrecision'/></svg>");  
+        position: absolute;
+        left: 90%;
+        top: 40%;
+    }
+    
+    #circles-17{
+        height: 130px;
+        width: 230px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'> <rect width='4' height='4' fill='rgb(26, 36, 54)' /><circle cx='6' cy='6' r='5' fill='rgba(46, 56, 75)' shape-rendering='geometricPrecision'/></svg>");  
+        position: absolute;
+        left: 90%;
+        top: 70%;
+    }
+}
+
+@media screen and (max-width: 2100px){
+    #circles-16{
+        left: 88%;
+        z-index: 1;
+    }
+
+    #circles-17{
+        left: 88%;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    #circles-16{
+        left: 86%;
+    }
+
+    #circles-17{
+        left: 86%;
+    }
+}
+
+@media screen and (max-width: 1520px) {
+    #circles-16{
+        left: 84%;
+    }
+
+    #circles-17{
+        left: 84%;
+    }
+
+    .footer{
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    #circles-16{
+        left: 82%;
+    }
+
+    #circles-17{
+        left: 82%;
+    }
+}
