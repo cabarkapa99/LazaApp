@@ -11,6 +11,7 @@
     --color-blue-3: rgb(20, 18, 150);
     --color-blue-4: rgb(26, 36, 54);
     --color-yellow: rgb(255, 186, 1);
+    --proba: #f7effa;
 }
 *{
     margin: 0px;
@@ -346,13 +347,13 @@ button{
     translate: 0 -50%;
     width: 30px;
     height: 30px;
-    background-image: url('pictures/icons/passwordOn.png');
+    background-image: url('../pictures/icons/passwordOn.png');
     background-size: 85%;
     background-position: center;
     background-repeat: no-repeat;
 }
 .toggle.showing{
-    background-image: url('pictures/icons/passwordOff.png');
+    background-image: url('../pictures/icons/passwordOff.png');
 }
 #circles-1{
     height: 100px;
@@ -717,9 +718,9 @@ button{
     position: relative;
     background-color: #a5f1c6;
 }
-.about-card-picture img{
+/* .about-card-picture img{
 
-}
+} */
 #circles-5{
     height: 100px;
     width: 170px;

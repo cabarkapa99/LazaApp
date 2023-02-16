@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laza aplikacija</title>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./styles/main.css">
+        <link rel="stylesheet" type="text/css" href="./styles/register.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+                <img src="pictures/hubeg-logo.jpg">
+            </div>
+            <nav id="nav">
+                <div id="burger" class="center-y-axis margin-58">
+                    <span id="line1" class="line"></span>
+                    <span id="line2" class="line"></span>
+                    <span id="line3" class="line"></span>
+                </div>
+                <ul id="nav-list" class="height-0-850px">
+                    <li><a href="#" class="center-y-axis">Početna</a></li>
+                    <li><a href="#" class="center-y-axis">O aplikaciji</a></li>
+                    <li><a href="#" class="center-y-axis">Paketi</a></li>
+                    <li><a href="#" class="center-y-axis">Pitanja</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="hero">
+            <div class="login-register-cards1">
+                <div class="login-card" id="login-card">
+                    <div id="wrong-value-div" class="wrong-value-div"></div>
+                    <h2>Prijavite se</h2>
+                    <h3>Unesite Vase podatke</h3>
+                    <form class="login-form">
+                        <input class="control" type="text" placeholder="Username" id="username-login">
+                        <div class="password">
+                            <input class="control" id="password-login" placeholder="Password">
+                            <button class="toggle" type="button" onclick="togglePassword(this)"></button>
+                        </div>
+                        <button class="control">LOGIN</button>
+                    </form>
+                    <div id="create-new-account">Napravite novi nalog</div>
+                </div>
+
+                <div class="register-card hiden" id="register-card">
+                    <div id="wrong-value-div-reg" class="wrong-value-div"></div>
+                    <h2>Registrujte se</h2>
+
+                    <h3>Unesite Vase podatke</h3>
+                    <form class="register-form">
+                        <input class="control" type="email" placeholder="Email" id="email-register">
+                        <input class="control" type="text" placeholder="Username" id="username-register">
+                        <div class="password">
+                            <input class="control" id="password-register" placeholder="Password">
+                            <button class="toggle" type="button" onclick="togglePassword(this)"></button>
+                        </div>
+                        <button class="control">REGISTER</button>
+                    </form>
+                    <div id="already-have-account">Već imate nalog</div>
+                </div>
+            </div>
+            
+        </div>
+
+        <script src="./js/register.js"></script>
+    </body>
+</html>
