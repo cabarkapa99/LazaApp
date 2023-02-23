@@ -18,11 +18,9 @@
     }
     .notification-event h5{
         font-size: 14px;
-        top: 25%;
     }
     .notification-event p{
         font-size: 13px;
-        top: 28%;
     }
 } 
 @media (max-width: 1100px){ 
@@ -88,8 +86,6 @@
     }
     #bell-on{
         display: block;
-    }
-    #notifications{
     }
     #main{
         width: 77%;
@@ -176,8 +172,6 @@
         width: 16%;
         font-size: calc(1.5vw + 5px);
     }
-    .main-button{
-    }
 }
 @media (max-width: 550px){   
     .main-button{
@@ -214,6 +208,20 @@
       }
     #left-side{
         width: 50%;
+    }
+    .modal{
+        max-width: 270px;
+        padding: 0 30px 30px 30px;
+    }
+    .modal h3{
+        font-size: 24px;
+        padding: 40px 10px 40px 10px;
+    }
+    .modal-form-input{
+        height: 56px;
+    }
+    .modal-form-confirm-btn{
+        height: 50px;
     }
 }
 @media (max-width: 450px){
@@ -253,6 +261,21 @@
     }
     #statistics{
         top: 13%;
+    }
+    .modal{
+        padding: 0 15px 30px 15px;
+    }
+    .modal h3{
+        padding: 50px 10px 20px 10px;
+    }
+    .modal-form{
+        gap: 20px;
+    }
+    .modal-form-input{
+        height: 50px;
+    }
+    .modal-form-confirm-btn{
+        height: 45px;
     }
     #main-buttons{
         top: 45%;

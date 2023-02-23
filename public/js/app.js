@@ -156,3 +156,23 @@ bellOff.addEventListener('click', function(){
         closeList1();
     }
 });
+
+const vehiclesSearchByRegistrationInput = document.getElementById('vehicles-search-by-registration-input');
+const vehicleDrivingSchool = document.getElementsByClassName('vehicle-driving-school');
+
+vehiclesSearchByRegistrationInput.addEventListener('keyup', (e)=>{
+    let searchRegistrationContent = vehiclesSearchByRegistrationInput.value.toUpperCase();
+    
+    for(let i=0; i<vehicleDrivingSchool.length; i++){
+        let vehicleDrivingSchoolRegistrationH3 = vehicleDrivingSchool[i].getElementsByClassName('vehicle-driving-school-registration-h3')[0];
+        if(vehicleDrivingSchoolRegistrationH3){
+            let vehicleDrivingSchoolRegistrationH3Text = vehicleDrivingSchoolRegistrationH3.innerText;
+            if(vehicleDrivingSchoolRegistrationH3Text.toUpperCase().indexOf(searchRegistrationContent) > -1){
+                vehicleDrivingSchool[i].style.display = "";
+            }else{
+                vehicleDrivingSchool[i].style.display = "none";
+            }
+        }
+        
+    }
+})
