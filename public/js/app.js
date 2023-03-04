@@ -1,5 +1,10 @@
 const navLis = document.getElementsByClassName('nav-li');
 const navAs = document.getElementsByClassName('nav-a');
+const hidenElements = document.getElementsByClassName('hiden-element');
+const liHero = document.getElementById('li-hero');
+const liVehicle = document.getElementById("li-vehicle");
+const hero = document.getElementById('hero');
+const vehicles = document.getElementById('vehicles');
 
 for(let i=1; i<navLis.length-1; i++){
     navAs[i].addEventListener('click', (e)=>{
@@ -19,8 +24,17 @@ for(let i=1; i<navLis.length-1; i++){
             navAs[i-1].classList.add('li-clicked2');
             navLis[i-1].classList.add('li-clicked1');
         }
+        for(let i=0; i<hidenElements.length; i++){
+            hidenElements[i].classList.add('hiden');
+        }
     });
 }
+liHero.addEventListener('click', (e)=>{
+    hero.classList.remove('hiden');
+});
+liVehicle.addEventListener('click', (e)=>{
+    vehicles.classList.remove('hiden');
+})
 
 const studentBtn = document.getElementById('student-btn');
 const modals = document.getElementById('modals');
@@ -157,22 +171,3 @@ bellOff.addEventListener('click', function(){
     }
 });
 
-const vehiclesSearchByRegistrationInput = document.getElementById('vehicles-search-by-registration-input');
-const vehicleDrivingSchool = document.getElementsByClassName('vehicle-driving-school');
-
-vehiclesSearchByRegistrationInput.addEventListener('keyup', (e)=>{
-    let searchRegistrationContent = vehiclesSearchByRegistrationInput.value.toUpperCase();
-    
-    for(let i=0; i<vehicleDrivingSchool.length; i++){
-        let vehicleDrivingSchoolRegistrationH3 = vehicleDrivingSchool[i].getElementsByClassName('vehicle-driving-school-registration-h3')[0];
-        if(vehicleDrivingSchoolRegistrationH3){
-            let vehicleDrivingSchoolRegistrationH3Text = vehicleDrivingSchoolRegistrationH3.innerText;
-            if(vehicleDrivingSchoolRegistrationH3Text.toUpperCase().indexOf(searchRegistrationContent) > -1){
-                vehicleDrivingSchool[i].style.display = "";
-            }else{
-                vehicleDrivingSchool[i].style.display = "none";
-            }
-        }
-        
-    }
-})

@@ -1,3 +1,8 @@
+@media (max-width: 1200px){  
+    #main{
+        width: calc(80% - 240px);
+    }
+}
 @media (max-width: 1150px){    
     .statistics{
         width: calc(70px + 10vw);
@@ -52,6 +57,10 @@
     #statistics-column-name{
         top: 10%;
     }
+    #main{
+        width: calc(100% - 460px);
+        left: 220px;
+    }
 }
 @media (max-width: 1024px){
     #nav i{
@@ -65,16 +74,8 @@
     .statistics{
         height: calc(80px + 6vw);
     }
-    #main-buttons{
-        position: relative;
-        left: calc(25vw - 270px);
-        top: 35%;
-    }
 }
-@media (max-width: 950px){  
-    #main-buttons{
-        left: calc(25vw - 255px);
-    }
+@media (max-width: 950px){
     #notifications-conteiner{
         width: 85%;
         left: 7.5%;
@@ -88,11 +89,11 @@
         display: block;
     }
     #main{
-        width: 77%;
-        left: 23%;
+        width: calc(100% - 220px);
+        left: 220px;
     }     
     #statistics-conteiner{
-        top: 3%;
+        margin-top: 5%;
     } 
     .statistics{
         height: calc(60px + 10vw);
@@ -107,8 +108,7 @@
     }
     #main-buttons{
         min-width: 0;
-        left: 0;
-        margin: auto;
+        top: 0;
     }
     .main-button{
         width: 220px;
@@ -145,10 +145,6 @@
         width: 100%;
         left: 0;
     }
-    #statistics-conteiner{
-        margin-left: 7.5%;
-        top: 5%;
-    }
     .statistics{
         height: calc(60px + 12vw);
         width: calc(45px + 18vw);
@@ -183,10 +179,6 @@
     .none-500{
         display: none;
     }
-    #statistics-conteiner{
-        top: 10%;
-        height: 20%;
-    }
     .statistics{
         height: calc(70px + 14vw);
         width: calc(55px + 24vw);
@@ -197,11 +189,6 @@
     .statistics-line{
         width: 14%;
         font-size: calc(1.8vw + 6px);
-    }
-    #notifications{
-        width: 80%;
-        height: 100%;
-        top: 0;
     }
     .form-control {
         font-size: 15px;
@@ -234,9 +221,6 @@
         top: 10%;
         width: 33%;
     }
-    #main-buttons{
-        top: 40%;
-    }
     .main-button{
         width: 45vw;
         height: 180px;
@@ -247,7 +231,7 @@
         top: 20%;
     }
     #main-buttons{
-        top: 50%;
+        top: 5%;
     }
     .main-button{
         width: 45vw;
@@ -276,9 +260,6 @@
     }
     .modal-form-confirm-btn{
         height: 45px;
-    }
-    #main-buttons{
-        top: 45%;
     }
     .main-button{
         width: 45vw;
