@@ -1,0 +1,45 @@
+@media (max-width: 1300px){
+    .vehicles-driving-school-conteiner{
+        width: 90%;
+    }
+}
+@media (max-width: 1024px){
+    .vehicles-driving-school-conteiner{
+        width: 95%;
+    }
+}
+@media (max-width: 768px){
+    .vehicles-search-conteiner input{
+        font-size: calc(.6vw + 10px);
+    }
+    #vehicles-search-by-category-select{
+        font-size: calc(.6vw + 10px);
+    }
+}
+@media (max-width: 550px){
+    .vehicles-search-conteiner input{
+        font-size: calc(.8vw + 10px);
+    }
+    #vehicles-search-by-category-select{
+        font-size: calc(.8vw + 10px);
+    }
+}
+@media (max-width: 500px){
+    .vehicles-search-conteiner{
+        flex-direction: column;
+        gap: 20px;
+        margin: 100px auto 50px auto;
+        height: fit-content;
+        width: 100%;
+    }
+    .vehicles-search-by-registration{
+        width: 50%;
+    }
+    .vehicles-search-by-category{
+        width: 50%;
+    }
+    
+    #vehicles-search-by-category-select{
+        width: 90%;
+    }
+}
