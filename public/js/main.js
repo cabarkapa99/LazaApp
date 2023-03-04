@@ -128,3 +128,25 @@ list.addEventListener('click', function(){
     if(clicked === true)
         closeList();
 });
+
+const answers = document.querySelectorAll(".answer");
+const arrows = document.querySelectorAll(".arrow");
+const questions = document.querySelectorAll(".question");
+const angles = document.querySelectorAll(".fa-angle-down");
+
+for(let i = 0; i<arrows.length; i++){
+    arrows[i].addEventListener("click", () => {
+        
+        const currentlyOpen = document.querySelectorAll(".answer");
+
+        for(let j=0; j<currentlyOpen.length; j++){
+            if(!currentlyOpen[j].classList.contains("hidden") && currentlyOpen[j] != currentlyOpen[i]){
+                currentlyOpen[j].classList.toggle("hidden");
+                angles[j].classList.toggle("rotate-arrow");
+            }    
+        }
+
+        answers[i].classList.toggle("hidden");
+        angles[i].classList.toggle("rotate-arrow");
+    })
+}
