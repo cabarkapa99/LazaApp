@@ -167,8 +167,6 @@ function completeSearchByCategoru(categoryArray){
     }
 }
 
-
-
 vehiclesSearchByCategorySelect.addEventListener("change", (e)=>{
     let category = vehiclesSearchByCategorySelect.value;
     if(category == 0){
