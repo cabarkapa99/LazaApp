@@ -8,7 +8,7 @@ let vehiclesArray = [
         registrationDate: "18.07.2023",
         instructors: ["Dragostav Petronijevic","Dragostav Petronijevic","Dragostav Petronijevic","Milivoje Hadzihafizbegovic",
                     ],
-        technicalReview: ["17. 1. 2023.", "17. 7. 2023."]
+        technicalReview: ["17. 21. 2023.", "17. 33. 2023."]
     },
     {
         id: 2,
@@ -76,6 +76,8 @@ function showVehicle(vehicle){
     const vehicleDrivingSchoolInstructorsUl = document.getElementsByClassName('vehicle-driving-school-instructors-ul');
     
     const clone = vehiclepPototype.cloneNode(true);
+    let a = vehicle.registration[0] + vehicle.registration[1] + " " + "a";
+    console.log(a);
     clone.getElementsByClassName('vehicle-driving-school-registration-h3')[0].innerText = vehicle.registration;
     clone.getElementsByClassName('vehicle-driving-school-registration-h3-date')[0].innerText = vehicle.registrationDate;
     clone.getElementsByClassName('vehicle-driving-school-category')[0].innerText = vehicle.category;
