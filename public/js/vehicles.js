@@ -1,6 +1,9 @@
+
+
+
 let vehiclesArray = [
     {
-        id: 1,
+        id: 111,
         model: "CITROEN",
         brand: "C3",
         category: "B",
@@ -11,7 +14,7 @@ let vehiclesArray = [
         technicalReview: ["17. 21. 2023.", "17. 33. 2023."]
     },
     {
-        id: 2,
+        id: 44,
         model: "SUZUKI",
         brand: "GSX",
         category: "A",
@@ -21,7 +24,7 @@ let vehiclesArray = [
         technicalReview: ["07. 3. 2023.", "37. 19. 2023."]
     },
     {
-        id: 3,
+        id: 33,
         model: "MERCEDES",
         brand: "ACTROS",
         category: "C",
@@ -31,7 +34,7 @@ let vehiclesArray = [
         technicalReview: ["07. 3. 2023.", "37. 19. 2023."]
     },
     {
-        id: 4,
+        id: 77,
         model: "AUDI",
         brand: "A4",
         category: "B",
@@ -41,7 +44,7 @@ let vehiclesArray = [
         technicalReview: ["07. 3. 2023.", "37. 19. 2023."]
     },
     {
-        id: 5,
+        id: 22,
         model: "IKARBUS",
         brand: "103",
         category: "D",
@@ -51,7 +54,7 @@ let vehiclesArray = [
         technicalReview: ["07. 3. 2023.", "37. 19. 2023."]
     },
     {
-        id: 6,
+        id: 66,
         model: "IKARBUS",
         brand: "103",
         category: "D",
@@ -76,17 +79,22 @@ function showVehicle(vehicle){
     const vehicleDrivingSchoolInstructorsUl = document.getElementsByClassName('vehicle-driving-school-instructors-ul');
     
     const clone = vehiclepPototype.cloneNode(true);
-    let a = vehicle.registration[0] + vehicle.registration[1] + " " + "a";
-    console.log(a);
     clone.getElementsByClassName('vehicle-driving-school-registration-h3')[0].innerText = vehicle.registration;
     clone.getElementsByClassName('vehicle-driving-school-registration-h3-date')[0].innerText = vehicle.registrationDate;
     clone.getElementsByClassName('vehicle-driving-school-category')[0].innerText = vehicle.category;
     clone.getElementsByClassName('model')[0].innerText = vehicle.model;
     clone.getElementsByClassName('brand')[0].innerText = vehicle.brand;
+    clone.getElementsByClassName('vehicle-driving-school-button-1-id')[0].innerText = vehicle.id;
+    clone.getElementsByClassName('vehicle-driving-school-button-2-id')[0].innerText = vehicle.id;
+    clone.getElementsByClassName('vehicle-id')[0].innerText = vehicle.id;
     for(let i=0; i<vehicle.instructors.length; i++){
         let li=document.createElement('li');
+        let input = document.createElement('input');
+        input.disabled = true;
+        li.appendChild(input);
+        input.classList.add('instructor-input');
         clone.getElementsByClassName('vehicle-driving-school-instructors-ul')[0].appendChild(li);
-        li.innerHTML=li.innerHTML + vehicle.instructors[i];
+        input.value=vehicle.instructors[i];
     }
     for(let i=0; i<vehicle.technicalReview.length; i++){
         clone.getElementsByClassName('vehicle-driving-school-technical-review-h3')[i].innerText = vehicle.technicalReview[i];
@@ -105,7 +113,6 @@ function showVehicle(vehicle){
             clone.getElementsByClassName("vehicle-driving-school-left-side-img")[0].src = "pictures/vechicle/bus-ilustration.png";
             break;
     }
-
     vehiclesDrivingSchoolConteiner.appendChild(clone);
 }
 
@@ -113,22 +120,26 @@ function showVehicle(vehicle){
 const vehiclesSearchByRegistrationInput = document.getElementById('vehicles-search-by-registration-input');
 const vehicleDrivingSchool = document.getElementsByClassName('vehicle-driving-school');
 
-vehiclesSearchByRegistrationInput.addEventListener('keyup', (e)=>{
-    let searchRegistrationContent = vehiclesSearchByRegistrationInput.value.toUpperCase();
-    
-    for(let i=0; i<vehicleDrivingSchool.length; i++){
-        let vehicleDrivingSchoolRegistrationH3 = vehicleDrivingSchool[i].getElementsByClassName('vehicle-driving-school-registration-h3')[0];
-        if(vehicleDrivingSchoolRegistrationH3){
-            let vehicleDrivingSchoolRegistrationH3Text = vehicleDrivingSchoolRegistrationH3.innerText;
-            if(vehicleDrivingSchoolRegistrationH3Text.toUpperCase().indexOf(searchRegistrationContent) > -1){
-                vehicleDrivingSchool[i].style.display = "";
-            }else{
-                vehicleDrivingSchool[i].style.display = "none";
-            }
-        }
+function searchByRegistration(){
+    vehiclesSearchByRegistrationInput.addEventListener('keyup', (e)=>{
+        let searchRegistrationContent = vehiclesSearchByRegistrationInput.value.toUpperCase();
         
-    }
-})
+        for(let i=0; i<vehicleDrivingSchool.length; i++){
+            let vehicleDrivingSchoolRegistrationH3 = vehicleDrivingSchool[i].getElementsByClassName('vehicle-driving-school-registration-h3')[0];
+            if(vehicleDrivingSchoolRegistrationH3){
+                let vehicleDrivingSchoolRegistrationH3Text = vehicleDrivingSchoolRegistrationH3.innerText;
+                if(vehicleDrivingSchoolRegistrationH3Text.toUpperCase().indexOf(searchRegistrationContent) > -1){
+                    vehicleDrivingSchool[i].style.display = "";
+                }else{
+                    vehicleDrivingSchool[i].style.display = "none";
+                }
+            }
+            
+        }
+    })
+}
+searchByRegistration();
+
 
 const vehiclesSearchByCategorySelect = document.getElementById('vehicles-search-by-category-select');
 
@@ -160,37 +171,158 @@ function sortListOfCategories(){
 sortListOfCategories();
 
 function completeSearchByCategoru(categoryArray){
+    let duz = categoryArray.length + 2;
+    for(let i=0; i<duz; i++){
+        let option = document.createElement("option");
+        vehiclesSearchByCategorySelect.remove(option);
+    }
+    let option = document.createElement("option");
+    option.text = "Kategorija";
+    vehiclesSearchByCategorySelect.add(option);
     for(let i=0; i<categoryArray.length; i++){
         let category;
         category = categoryArray[i];
-        var option = document.createElement("option");
+        let option = document.createElement("option");
         option.text = category;
         vehiclesSearchByCategorySelect.add(option);
     }
 }
 
-vehiclesSearchByCategorySelect.addEventListener("change", (e)=>{
-    let category = vehiclesSearchByCategorySelect.value;
-    if(category == 0){
-        for(let j=0; j<vehicleDrivingSchool.length; j++){
-            vehicleDrivingSchool[j].style.display = "";
+function searchByCategory(){
+    vehiclesSearchByCategorySelect.addEventListener("change", (e)=>{
+        let category = vehiclesSearchByCategorySelect.value;
+        if(category == "Kategorija"){
+            for(let j=0; j<vehicleDrivingSchool.length; j++){
+                vehicleDrivingSchool[j].style.display = "";
+            }
+            return;
         }
-        return;
-    }
-    
-    for(let i=0; i<vehicleDrivingSchool.length; i++){
-        let vehicleDrivingSchoolCategory = vehicleDrivingSchool[i].getElementsByClassName('vehicle-driving-school-category')[0];
         
-        if(vehicleDrivingSchoolCategory){
-            let vehicleDrivingSchoolCategoryText = vehicleDrivingSchoolCategory.innerText;
-           
-            if(vehicleDrivingSchoolCategoryText.toUpperCase().indexOf(category) > -1){
-                vehicleDrivingSchool[i].style.display = "";
-            }else{
-                vehicleDrivingSchool[i].style.display = "none";
+        for(let i=0; i<vehicleDrivingSchool.length; i++){
+            let vehicleDrivingSchoolCategory = vehicleDrivingSchool[i].getElementsByClassName('vehicle-driving-school-category')[0];
+            
+            if(vehicleDrivingSchoolCategory){
+                let vehicleDrivingSchoolCategoryText = vehicleDrivingSchoolCategory.innerText;
+               
+                if(vehicleDrivingSchoolCategoryText.toUpperCase().indexOf(category) > -1){
+                    vehicleDrivingSchool[i].style.display = "";
+                }else{
+                    vehicleDrivingSchool[i].style.display = "none";
+                }
             }
         }
-    }
-})
+    });
+}
+searchByCategory();
 
+
+const vehicleDrivingSchoolButtons1 = document.getElementsByClassName('vehicle-driving-school-button-1');
+const vehicleDrivingSchoolInstructors = document.getElementsByClassName('vehicle-driving-school-instructors');
+const vehicleDrivingSchoolInstructorsChange = document.getElementsByClassName('vehicle-driving-school-instructors-change');
+const vehicleDrivingSchoolInstructorsButton = document.getElementsByClassName('vehicle-driving-school-instructors-button');
+
+function chanegeInstructors(){
+    for(let i=0; i<vehicleDrivingSchoolButtons1.length; i++){
+        vehicleDrivingSchoolButtons1[i].addEventListener('click', (e)=>{
+            let buttonId = vehicleDrivingSchoolButtons1[i].getElementsByClassName('vehicle-driving-school-button-1-id')[0].innerText;
+            for(let j=0; j<vehicleDrivingSchool.length; j++){
+                if(vehicleDrivingSchool[j].getElementsByClassName('vehicle-id')[0].innerText === buttonId){
+                    let instructorInput = vehicleDrivingSchool[j].getElementsByClassName('instructor-input');
+                    let vehicleDrivingSchoolInstructorsUl = vehicleDrivingSchool[j].getElementsByClassName('vehicle-driving-school-instructors-ul');
+                    let li=document.createElement('li');
+                    let input = document.createElement('input');
+                    input.placeholder = "Dodaj novog";
+                    li.appendChild(input);
+                    input.classList.add('instructor-input-add');
+                    input.classList.add('instructor-input');
+                    vehicleDrivingSchoolInstructorsUl[0].appendChild(li);
+                    for(let k=0; k<instructorInput.length; k++){
+                        instructorInput[k].disabled = false;
+                        instructorInput[0].focus();
+                    }
+                    vehicleDrivingSchoolInstructorsButton[j].classList.remove('none');
+                    
+                    vehicleDrivingSchoolInstructorsButton[j].addEventListener('click', (e)=>{
+                        let instruktorArray = [];
+                        for(let m=0; m<instructorInput.length; m++){
+                            if(instructorInput[m].value == ''){
+                                instructorInput[m].remove();
+                            }
+                        }
+                        for(let m=0; m<instructorInput.length; m++){
+                                instruktorArray[m] = instructorInput[m].value;
+                        }
+                        
+                        vehicleDrivingSchoolInstructorsButton[j].classList.add('none');
+                        instructorInput = null;
+                        instructorInput = vehicleDrivingSchool[j].getElementsByClassName('instructor-input');
+                        for(let k=0; k<instructorInput.length; k++){
+                            instructorInput[k].disabled = true;
+                        }
+                        changeInstruktors(instruktorArray, buttonId);
+                    });
+                }
+            }
+        })
+    };
+}
+chanegeInstructors();
+
+function changeInstruktors(instruktorArray, id){
+    for(let i=0; i<vehiclesArray.length; i++){
+        if(vehiclesArray[i].id == id){
+            vehiclesArray[i].instructors = instruktorArray;
+        }
+    }
+    clearVehiclesContainer();
+    readVehiclesFromDB();
+    chanegeInstructors();
+    addEventListenerDeleteVehicle();
+}
+
+function clearVehiclesContainer(){
+    const vehiclesDrivingSchool = document.getElementsByClassName('vehicle-driving-school');
+    const Vlength = vehiclesDrivingSchool.length;
+    for(let i=0; i<Vlength; i++){
+        vehiclesDrivingSchool[0].remove();
+    }
+}
+
+const vehicleDrivingSchoolButtons2 = document.getElementsByClassName('vehicle-driving-school-button-2');
+function addEventListenerDeleteVehicle(){
+    for(let i=0; i<vehicleDrivingSchoolButtons2.length; i++){
+        vehicleDrivingSchoolButtons2[i].addEventListener('click', (e)=>{
+            let buttonId = vehicleDrivingSchoolButtons2[i].getElementsByClassName("vehicle-driving-school-button-2-id")[0].innerText;
+            for(let j=0; j<vehicleDrivingSchool.length; j++){
+                if(vehicleDrivingSchool[j].getElementsByClassName('vehicle-id')[0].innerText === buttonId){
+                    let vehicleDelete = vehicleDrivingSchool[j].getElementsByClassName('vehicle-delete')[0];
+                    vehicleDelete.classList.remove('none');
+                    let vehicleDeleteButtonIgnore = vehicleDrivingSchool[j].getElementsByClassName('vehicle-delete-button-ignore')[0];
+                    vehicleDeleteButtonIgnore.addEventListener('click', (e)=>{
+                        vehicleDelete.classList.add('none');
+                    });
+                    let vehicleDeleteButtonConfirm = vehicleDrivingSchool[j].getElementsByClassName('vehicle-delete-button-confirm')[0];
+                    vehicleDeleteButtonConfirm.addEventListener('click', (e)=>{
+                        deleteVehicle(buttonId);
+                        vehicleDelete.classList.add('none');
+                    })
+                }
+            }
+        });
+    }
+}
+addEventListenerDeleteVehicle();
+
+function deleteVehicle(id){
+    for(let i=0; i<vehiclesArray.length; i++){
+        if (id == vehiclesArray[i].id){
+            vehiclesArray.splice(i, 1);
+        }
+    }
+    clearVehiclesContainer();
+    readVehiclesFromDB();
+    chanegeInstructors();
+    addEventListenerDeleteVehicle();
+    sortListOfCategories();
+}
 

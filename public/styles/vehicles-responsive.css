@@ -115,11 +115,12 @@
         font-size: calc(.6vw + 9px);
         padding: 5px 15px;
     }
+    .vehicle-driving-school-button{
+        gap: 5px;
+    }
 }
 @media (max-width: 450px){
-    .vehicle-driving-school-right-side{
-        padding: 8% 3%;
-    }
+    
     .vehicle-driving-school-model-brand h3{
         width: 90%;
         text-align: center;
@@ -131,5 +132,12 @@
     .vehicle-driving-school-technical-review h3{
         font-size: calc(.6vw + 8px);
         padding: 5px 10px;
+    }
+    .vehicle-driving-school-buttons{
+        gap: 5px;
+    }
+    .vehicle-driving-school-button-1, .vehicle-driving-school-button-2{
+        width: 40%;
+        gap: 5px;
     }
 }
