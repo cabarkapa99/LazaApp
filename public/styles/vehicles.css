@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     transition: all .4s ease-out;
+    position: absolute;
 }
 .vehicles-search-conteiner{
     width: auto;
@@ -126,6 +127,9 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+.vehicle-driving-school-instructors p{
+    margin-bottom: 5px;
 }
 .vehicle-driving-school-instructors ul{
     list-style: none;

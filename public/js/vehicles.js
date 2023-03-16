@@ -1,6 +1,3 @@
-
-
-
 let vehiclesArray = [
     {
         id: 111,
@@ -9,7 +6,7 @@ let vehiclesArray = [
         category: "B",
         registration: "BG12345EV",
         registrationDate: "18.07.2023",
-        instructors: ["Dragostav Petronijevic","Dragostav Petronijevic","Dragostav Petronijevic","Milivoje Hadzihafizbegovic",
+        instructors: ["Dragoslav Petronijevic","Dragostav Petronijevic","Dragostav Petronijevic","Milivoje Hadzihafizbegovic",
                     ],
         technicalReview: ["17. 21. 2023.", "17. 33. 2023."]
     },
@@ -87,14 +84,14 @@ function showVehicle(vehicle){
     clone.getElementsByClassName('vehicle-driving-school-button-1-id')[0].innerText = vehicle.id;
     clone.getElementsByClassName('vehicle-driving-school-button-2-id')[0].innerText = vehicle.id;
     clone.getElementsByClassName('vehicle-id')[0].innerText = vehicle.id;
-    for(let i=0; i<vehicle.instructors.length; i++){
+    for(const instructor of vehicle.instructors){
         let li=document.createElement('li');
         let input = document.createElement('input');
         input.disabled = true;
         li.appendChild(input);
         input.classList.add('instructor-input');
         clone.getElementsByClassName('vehicle-driving-school-instructors-ul')[0].appendChild(li);
-        input.value=vehicle.instructors[i];
+        input.value=instructor;
     }
     for(let i=0; i<vehicle.technicalReview.length; i++){
         clone.getElementsByClassName('vehicle-driving-school-technical-review-h3')[i].innerText = vehicle.technicalReview[i];
@@ -120,18 +117,22 @@ function showVehicle(vehicle){
 const vehiclesSearchByRegistrationInput = document.getElementById('vehicles-search-by-registration-input');
 const vehicleDrivingSchool = document.getElementsByClassName('vehicle-driving-school');
 
+function search(){
+    
+}
+
 function searchByRegistration(){
     vehiclesSearchByRegistrationInput.addEventListener('keyup', (e)=>{
         let searchRegistrationContent = vehiclesSearchByRegistrationInput.value.toUpperCase();
         
-        for(let i=0; i<vehicleDrivingSchool.length; i++){
-            let vehicleDrivingSchoolRegistrationH3 = vehicleDrivingSchool[i].getElementsByClassName('vehicle-driving-school-registration-h3')[0];
+        for(const vehicle of vehicleDrivingSchool){
+            let vehicleDrivingSchoolRegistrationH3 = vehicle.getElementsByClassName('vehicle-driving-school-registration-h3')[0];
             if(vehicleDrivingSchoolRegistrationH3){
                 let vehicleDrivingSchoolRegistrationH3Text = vehicleDrivingSchoolRegistrationH3.innerText;
                 if(vehicleDrivingSchoolRegistrationH3Text.toUpperCase().indexOf(searchRegistrationContent) > -1){
-                    vehicleDrivingSchool[i].style.display = "";
+                    vehicle.style.display = "";
                 }else{
-                    vehicleDrivingSchool[i].style.display = "none";
+                    vehicle.style.display = "none";
                 }
             }
             
@@ -166,11 +167,11 @@ function sortListOfCategories(){
         }
     }
     categoryArray.sort();
-    completeSearchByCategoru(categoryArray);
+    completeSearchByCategory(categoryArray);
 }
 sortListOfCategories();
 
-function completeSearchByCategoru(categoryArray){
+function completeSearchByCategory(categoryArray){
     let duz = categoryArray.length + 2;
     for(let i=0; i<duz; i++){
         let option = document.createElement("option");
@@ -179,9 +180,7 @@ function completeSearchByCategoru(categoryArray){
     let option = document.createElement("option");
     option.text = "Kategorija";
     vehiclesSearchByCategorySelect.add(option);
-    for(let i=0; i<categoryArray.length; i++){
-        let category;
-        category = categoryArray[i];
+    for(const category of categoryArray){
         let option = document.createElement("option");
         option.text = category;
         vehiclesSearchByCategorySelect.add(option);
@@ -198,16 +197,16 @@ function searchByCategory(){
             return;
         }
         
-        for(let i=0; i<vehicleDrivingSchool.length; i++){
-            let vehicleDrivingSchoolCategory = vehicleDrivingSchool[i].getElementsByClassName('vehicle-driving-school-category')[0];
+        for(const vehicle of vehicleDrivingSchool){
+            let vehicleDrivingSchoolCategory = vehicle.getElementsByClassName('vehicle-driving-school-category')[0];
             
             if(vehicleDrivingSchoolCategory){
                 let vehicleDrivingSchoolCategoryText = vehicleDrivingSchoolCategory.innerText;
                
                 if(vehicleDrivingSchoolCategoryText.toUpperCase().indexOf(category) > -1){
-                    vehicleDrivingSchool[i].style.display = "";
+                    vehicle.style.display = "";
                 }else{
-                    vehicleDrivingSchool[i].style.display = "none";
+                    vehicle.style.display = "none";
                 }
             }
         }
@@ -221,57 +220,59 @@ const vehicleDrivingSchoolInstructors = document.getElementsByClassName('vehicle
 const vehicleDrivingSchoolInstructorsChange = document.getElementsByClassName('vehicle-driving-school-instructors-change');
 const vehicleDrivingSchoolInstructorsButton = document.getElementsByClassName('vehicle-driving-school-instructors-button');
 
+
 function chanegeInstructors(){
-    for(let i=0; i<vehicleDrivingSchoolButtons1.length; i++){
-        vehicleDrivingSchoolButtons1[i].addEventListener('click', (e)=>{
-            let buttonId = vehicleDrivingSchoolButtons1[i].getElementsByClassName('vehicle-driving-school-button-1-id')[0].innerText;
-            for(let j=0; j<vehicleDrivingSchool.length; j++){
-                if(vehicleDrivingSchool[j].getElementsByClassName('vehicle-id')[0].innerText === buttonId){
-                    let instructorInput = vehicleDrivingSchool[j].getElementsByClassName('instructor-input');
-                    let vehicleDrivingSchoolInstructorsUl = vehicleDrivingSchool[j].getElementsByClassName('vehicle-driving-school-instructors-ul');
-                    let li=document.createElement('li');
-                    let input = document.createElement('input');
-                    input.placeholder = "Dodaj novog";
-                    li.appendChild(input);
-                    input.classList.add('instructor-input-add');
-                    input.classList.add('instructor-input');
-                    vehicleDrivingSchoolInstructorsUl[0].appendChild(li);
-                    for(let k=0; k<instructorInput.length; k++){
-                        instructorInput[k].disabled = false;
-                        instructorInput[0].focus();
-                    }
-                    vehicleDrivingSchoolInstructorsButton[j].classList.remove('none');
-                    
-                    vehicleDrivingSchoolInstructorsButton[j].addEventListener('click', (e)=>{
-                        let instruktorArray = [];
-                        for(let m=0; m<instructorInput.length; m++){
-                            if(instructorInput[m].value == ''){
-                                instructorInput[m].remove();
-                            }
-                        }
-                        for(let m=0; m<instructorInput.length; m++){
-                                instruktorArray[m] = instructorInput[m].value;
-                        }
-                        
-                        vehicleDrivingSchoolInstructorsButton[j].classList.add('none');
-                        instructorInput = null;
-                        instructorInput = vehicleDrivingSchool[j].getElementsByClassName('instructor-input');
-                        for(let k=0; k<instructorInput.length; k++){
-                            instructorInput[k].disabled = true;
-                        }
-                        changeInstruktors(instruktorArray, buttonId);
-                    });
-                }
+    for(const vehicleButtonChange of vehicleDrivingSchoolButtons1){
+        vehicleButtonChange.addEventListener('click', (e)=>{
+            let vehicle = vehicleButtonChange.parentElement.parentElement.parentElement;      
+            let instructorInput = vehicle.getElementsByClassName('instructor-input');
+            addLiElementInInstructorUl(vehicle);
+            for(let k=0; k<instructorInput.length; k++){
+                instructorInput[k].disabled = false;
+                instructorInput[0].focus();
             }
+            const vehicleDrivingSchoolInstructorsButtonSave = vehicle.getElementsByClassName('vehicle-driving-school-instructors-button');
+            vehicleDrivingSchoolInstructorsButtonSave[0].classList.remove('none');
+            let instruktorArray = [];
+                    
+            vehicleDrivingSchoolInstructorsButtonSave[0].addEventListener('click', (e)=>{
+                for(let m=0; m<instructorInput.length; m++){
+                    if(instructorInput[m].value == ''){
+                        instructorInput[m].remove();
+                    }
+                }
+                vehicleDrivingSchoolInstructorsButtonSave[0].classList.add('none');
+                
+                instructorInput = vehicle.getElementsByClassName('instructor-input');
+                for(let m=0; m<instructorInput.length; m++){
+                        instruktorArray[m] = instructorInput[m].value;
+                }
+                for(let k=0; k<instructorInput.length; k++){
+                    instructorInput[k].disabled = true;
+                }
+                let vehicleId = vehicle.getElementsByClassName('vehicle-id')[0].innerText;     
+                changeInstructorsInDB(instruktorArray, vehicleId);
+            });
         })
     };
 }
 chanegeInstructors();
 
-function changeInstruktors(instruktorArray, id){
-    for(let i=0; i<vehiclesArray.length; i++){
-        if(vehiclesArray[i].id == id){
-            vehiclesArray[i].instructors = instruktorArray;
+function addLiElementInInstructorUl(vehicle){
+    let vehicleDrivingSchoolInstructorsUl = vehicle.getElementsByClassName('vehicle-driving-school-instructors-ul');
+    let li=document.createElement('li');
+    let input = document.createElement('input');
+    input.placeholder = "Dodaj novog";
+    li.appendChild(input);
+    input.classList.add('instructor-input-add');
+    input.classList.add('instructor-input');
+    vehicleDrivingSchoolInstructorsUl[0].appendChild(li);
+}
+
+function changeInstructorsInDB(instruktorArray, id){
+    for(const vehicle of vehiclesArray){
+        if(vehicle.id == id){
+            vehicle.instructors = instruktorArray;
         }
     }
     clearVehiclesContainer();
@@ -289,29 +290,31 @@ function clearVehiclesContainer(){
 }
 
 const vehicleDrivingSchoolButtons2 = document.getElementsByClassName('vehicle-driving-school-button-2');
+
 function addEventListenerDeleteVehicle(){
-    for(let i=0; i<vehicleDrivingSchoolButtons2.length; i++){
-        vehicleDrivingSchoolButtons2[i].addEventListener('click', (e)=>{
-            let buttonId = vehicleDrivingSchoolButtons2[i].getElementsByClassName("vehicle-driving-school-button-2-id")[0].innerText;
-            for(let j=0; j<vehicleDrivingSchool.length; j++){
-                if(vehicleDrivingSchool[j].getElementsByClassName('vehicle-id')[0].innerText === buttonId){
-                    let vehicleDelete = vehicleDrivingSchool[j].getElementsByClassName('vehicle-delete')[0];
-                    vehicleDelete.classList.remove('none');
-                    let vehicleDeleteButtonIgnore = vehicleDrivingSchool[j].getElementsByClassName('vehicle-delete-button-ignore')[0];
-                    vehicleDeleteButtonIgnore.addEventListener('click', (e)=>{
-                        vehicleDelete.classList.add('none');
-                    });
-                    let vehicleDeleteButtonConfirm = vehicleDrivingSchool[j].getElementsByClassName('vehicle-delete-button-confirm')[0];
-                    vehicleDeleteButtonConfirm.addEventListener('click', (e)=>{
-                        deleteVehicle(buttonId);
-                        vehicleDelete.classList.add('none');
-                    })
-                }
-            }
+    for(const button of vehicleDrivingSchoolButtons2){
+        button.addEventListener('click', (e)=>{
+            let buttonId = button.getElementsByClassName("vehicle-driving-school-button-2-id")[0].innerText;
+            let vehicle = button.parentElement.parentElement.parentElement;
+            activateVehicleDeleteDiv(vehicle, buttonId);
         });
     }
 }
 addEventListenerDeleteVehicle();
+
+function activateVehicleDeleteDiv(vehicle, ID){
+    let vehicleDelete = vehicle.getElementsByClassName('vehicle-delete')[0];
+    vehicleDelete.classList.remove('none');
+    let vehicleDeleteButtonIgnore = vehicle.getElementsByClassName('vehicle-delete-button-ignore')[0];
+    vehicleDeleteButtonIgnore.addEventListener('click', (e)=>{
+        vehicleDelete.classList.add('none');
+    });
+    let vehicleDeleteButtonConfirm = vehicle.getElementsByClassName('vehicle-delete-button-confirm')[0];
+    vehicleDeleteButtonConfirm.addEventListener('click', (e)=>{
+        deleteVehicle(ID);
+        vehicleDelete.classList.add('none');
+    })
+}
 
 function deleteVehicle(id){
     for(let i=0; i<vehiclesArray.length; i++){
