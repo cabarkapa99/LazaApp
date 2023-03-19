@@ -35,6 +35,9 @@ body{
 .block{
     display: block;
 }
+.hidden{
+    display: none !important;
+}
 .hiden{
     visibility: hidden;
     opacity: 0;
@@ -1200,9 +1203,7 @@ button{
     left: 20px;
 }
 
-.hidden{
-    display: none;
-}
+
 .footer-container{
     background-color: var(--color-blue-4);
     padding-bottom: 64px;

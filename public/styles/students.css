@@ -1,3 +1,86 @@
-.li-clicked3{
-    display: none;
+#students{
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    transition: all .4s ease-out;
 }
+
+.students-search-container{
+    margin: 13% auto;
+    width: auto;
+    display: flex;
+    gap: 5%;
+}
+
+.students-search-container input{
+    width: 80%;
+    padding: 10px 10px;
+    border-radius: 15px;
+    border: 2px solid black;
+    font-size: calc(.6vw + 8px);
+}
+
+.search-btn{
+    width: 20%;
+    border-radius: 20px;   
+    border-color: rgba(148, 146, 224, 0.2);
+    box-shadow: -5px -5px 10px rgba(148, 146, 224, 0.2), 5px 0px 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
+}
+
+.search-btn:hover{
+    cursor: pointer;
+}
+
+.students-list-container{
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.students-list-item{
+    width: auto;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 50%;
+    padding: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    /* border-style: solid; */
+    border-radius: 15px;
+    border: 2px solid rgb(96, 91, 227, .5);
+    box-shadow: -5px -5px 10px rgba(148, 146, 224, 0.3), 5px 5px 10px rgba(37, 34, 124, 0.35);
+
+}
+
+.students-basic{
+    display: flex;
+    flex-direction: row;
+    gap: 50%;
+}
+
+.full-name{
+    width: 50%;
+    display: flex;
+    gap: 5%;
+}
+
+.students-info{
+    width: auto;
+    margin: auto;
+}
+
+.students-info-cards{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+

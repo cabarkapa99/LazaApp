@@ -38,6 +38,9 @@ body{
 .white{
     color: var(--color-white);
 }
+/* .hidden{
+    display: none !important;
+} */
 .hiden{
     opacity: 0;
     visibility: hidden;
