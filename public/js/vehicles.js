@@ -1,8 +1,8 @@
 let vehiclesArray = [
     {
         id: 111,
-        model: "CITROEN",
-        brand: "C3",
+        brand: "CITROEN",
+        model: "C3",
         category: "B",
         registration: "BG12345EV",
         registrationDate: "18.07.2023",
@@ -12,8 +12,8 @@ let vehiclesArray = [
     },
     {
         id: 44,
-        model: "SUZUKI",
-        brand: "GSX",
+        brand: "SUZUKI",
+        model: "GSX",
         category: "A",
         registration: "SO89898GG",
         registrationDate: "08.02.2023",
@@ -22,8 +22,8 @@ let vehiclesArray = [
     },
     {
         id: 33,
-        model: "MERCEDES",
-        brand: "ACTROS",
+        brand: "MERCEDES",
+        model: "ACTROS",
         category: "C",
         registration: "BG15555WV",
         registrationDate: "18.04.2023",
@@ -32,8 +32,8 @@ let vehiclesArray = [
     },
     {
         id: 77,
-        model: "AUDI",
-        brand: "A4",
+        brand: "AUDI",
+        model: "A4",
         category: "B",
         registration: "KG33322AV",
         registrationDate: "18.02.2023",
@@ -42,8 +42,8 @@ let vehiclesArray = [
     },
     {
         id: 22,
-        model: "IKARBUS",
-        brand: "103",
+        brand: "IKARBUS",
+        model: "103",
         category: "D",
         registration: "BG12345FF",
         registrationDate: "18.02.2023",
@@ -52,8 +52,8 @@ let vehiclesArray = [
     },
     {
         id: 66,
-        model: "IKARBUS",
-        brand: "103",
+        brand: "IKARBUS",
+        model: "106",
         category: "D",
         registration: "BG12345FF",
         registrationDate: "18.02.2023",
@@ -115,31 +115,9 @@ function showVehicle(vehicle){
 
 
 const vehiclesSearchByRegistrationInput = document.getElementById('vehicles-search-by-registration-input');
+const vehiclesSearchByBrandInput = document.getElementById('vehicles-search-by-brand-input');
+const vehiclesSearchByModelInput = document.getElementById('vehicles-search-by-model-input');
 const vehicleDrivingSchool = document.getElementsByClassName('vehicle-driving-school');
-
-function search(){
-    
-}
-
-function searchByRegistration(){
-    vehiclesSearchByRegistrationInput.addEventListener('keyup', (e)=>{
-        let searchRegistrationContent = vehiclesSearchByRegistrationInput.value.toUpperCase();
-        
-        for(const vehicle of vehicleDrivingSchool){
-            let vehicleDrivingSchoolRegistrationH3 = vehicle.getElementsByClassName('vehicle-driving-school-registration-h3')[0];
-            if(vehicleDrivingSchoolRegistrationH3){
-                let vehicleDrivingSchoolRegistrationH3Text = vehicleDrivingSchoolRegistrationH3.innerText;
-                if(vehicleDrivingSchoolRegistrationH3Text.toUpperCase().indexOf(searchRegistrationContent) > -1){
-                    vehicle.style.display = "";
-                }else{
-                    vehicle.style.display = "none";
-                }
-            }
-            
-        }
-    })
-}
-searchByRegistration();
 
 
 const vehiclesSearchByCategorySelect = document.getElementById('vehicles-search-by-category-select');
@@ -186,33 +164,49 @@ function completeSearchByCategory(categoryArray){
         vehiclesSearchByCategorySelect.add(option);
     }
 }
-
-function searchByCategory(){
-    vehiclesSearchByCategorySelect.addEventListener("change", (e)=>{
-        let category = vehiclesSearchByCategorySelect.value;
-        if(category == "Kategorija"){
-            for(let j=0; j<vehicleDrivingSchool.length; j++){
-                vehicleDrivingSchool[j].style.display = "";
-            }
-            return;
-        }
-        
-        for(const vehicle of vehicleDrivingSchool){
-            let vehicleDrivingSchoolCategory = vehicle.getElementsByClassName('vehicle-driving-school-category')[0];
-            
-            if(vehicleDrivingSchoolCategory){
-                let vehicleDrivingSchoolCategoryText = vehicleDrivingSchoolCategory.innerText;
-               
-                if(vehicleDrivingSchoolCategoryText.toUpperCase().indexOf(category) > -1){
-                    vehicle.style.display = "";
-                }else{
-                    vehicle.style.display = "none";
-                }
-            }
-        }
-    });
+function activateSearchByRegistration(){
+    vehiclesSearchByRegistrationInput.addEventListener('keyup', search);
 }
-searchByCategory();
+activateSearchByRegistration();
+
+function activateSearchByCategory(){
+    vehiclesSearchByCategorySelect.addEventListener("change", search)
+}
+activateSearchByCategory();
+
+function activateSearchByBrand(){
+    vehiclesSearchByBrandInput.addEventListener("keyup", search)
+}
+activateSearchByBrand();
+
+function activateSearchByModel(){
+    vehiclesSearchByModelInput.addEventListener("keyup", search)
+}
+activateSearchByModel();
+
+function search(){
+    let searchRegistrationContent = vehiclesSearchByRegistrationInput.value.toUpperCase();
+    let searchBrandContent = vehiclesSearchByBrandInput.value.toUpperCase();
+    let searchModelContent = vehiclesSearchByModelInput.value.toUpperCase();
+    let categoryContent = vehiclesSearchByCategorySelect.value;
+
+    for(vehicle of vehicleDrivingSchool){
+        let vehicleDrivingSchoolRegistrationH3 = vehicle.getElementsByClassName('vehicle-driving-school-registration-h3')[0].innerText;
+        let vehicleDrivingSchoolCategory = vehicle.getElementsByClassName('vehicle-driving-school-category')[0].innerText;
+        let vehicleDrivingSchoolBrandH3 = vehicle.getElementsByClassName("brand")[0].innerText;
+        let vehicleDrivingSchoolModelH3 = vehicle.getElementsByClassName("model")[0].innerText;
+
+        if((vehicleDrivingSchoolCategory.toUpperCase().indexOf(categoryContent) > -1 || categoryContent == "Kategorija")
+            & vehicleDrivingSchoolRegistrationH3.toUpperCase().indexOf(searchRegistrationContent) > -1 
+            & vehicleDrivingSchoolBrandH3.toUpperCase().indexOf(searchBrandContent) > -1
+            & vehicleDrivingSchoolModelH3.toUpperCase().indexOf(searchModelContent) > -1
+            ){
+            vehicle.style.display = "";
+        }else{
+            vehicle.style.display = "none";
+        }
+    }
+}
 
 
 const vehicleDrivingSchoolButtons1 = document.getElementsByClassName('vehicle-driving-school-button-1');
@@ -290,6 +284,8 @@ function clearVehiclesContainer(){
 }
 
 const vehicleDrivingSchoolButtons2 = document.getElementsByClassName('vehicle-driving-school-button-2');
+
+
 
 function addEventListenerDeleteVehicle(){
     for(const button of vehicleDrivingSchoolButtons2){
