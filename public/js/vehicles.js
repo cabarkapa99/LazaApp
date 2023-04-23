@@ -84,15 +84,9 @@ function showVehicle(vehicle){
     clone.getElementsByClassName('vehicle-driving-school-button-1-id')[0].innerText = vehicle.id;
     clone.getElementsByClassName('vehicle-driving-school-button-2-id')[0].innerText = vehicle.id;
     clone.getElementsByClassName('vehicle-id')[0].innerText = vehicle.id;
-    for(const instructor of vehicle.instructors){
-        let li=document.createElement('li');
-        let input = document.createElement('input');
-        input.disabled = true;
-        li.appendChild(input);
-        input.classList.add('instructor-input');
-        clone.getElementsByClassName('vehicle-driving-school-instructors-ul')[0].appendChild(li);
-        input.value=instructor;
-    }
+
+    addInstructors(vehicle, clone);
+    
     for(let i=0; i<vehicle.technicalReview.length; i++){
         clone.getElementsByClassName('vehicle-driving-school-technical-review-h3')[i].innerText = vehicle.technicalReview[i];
     }
@@ -111,6 +105,17 @@ function showVehicle(vehicle){
             break;
     }
     vehiclesDrivingSchoolConteiner.appendChild(clone);
+}
+function addInstructors(vehicle, clone){
+    for(const instructor of vehicle.instructors){
+        let li=document.createElement('li');
+        let input = document.createElement('input');
+        input.disabled = true;
+        li.appendChild(input);
+        input.classList.add('instructor-input');
+        clone.getElementsByClassName('vehicle-driving-school-instructors-ul')[0].appendChild(li);
+        input.value=instructor;
+    }
 }
 
 
@@ -228,24 +233,22 @@ function chanegeInstructors(){
             const vehicleDrivingSchoolInstructorsButtonSave = vehicle.getElementsByClassName('vehicle-driving-school-instructors-button');
             vehicleDrivingSchoolInstructorsButtonSave[0].classList.remove('none');
             let instruktorArray = [];
-                    
+
             vehicleDrivingSchoolInstructorsButtonSave[0].addEventListener('click', (e)=>{
-                for(let m=0; m<instructorInput.length; m++){
-                    if(instructorInput[m].value == ''){
-                        instructorInput[m].remove();
-                    }
+                instruktorArray = [];
+                for(let i=0; i<instructorInput.length; i++){
+                    if(instructorInput[i].value != ''){
+                        instruktorArray.push(instructorInput[i].value);
+                    }    
                 }
                 vehicleDrivingSchoolInstructorsButtonSave[0].classList.add('none');
-                
-                instructorInput = vehicle.getElementsByClassName('instructor-input');
-                for(let m=0; m<instructorInput.length; m++){
-                        instruktorArray[m] = instructorInput[m].value;
-                }
-                for(let k=0; k<instructorInput.length; k++){
-                    instructorInput[k].disabled = true;
-                }
                 let vehicleId = vehicle.getElementsByClassName('vehicle-id')[0].innerText;     
                 changeInstructorsInDB(instruktorArray, vehicleId);
+                clearInstructorsInVehiclesView(vehicleId);
+                addInstructorsInVehiclesView(vehicleId);
+                for(let i=0; i<instructorInput.length; i++){
+                        instructorInput[i].disabled = true;
+                }
             });
         })
     };
@@ -269,10 +272,49 @@ function changeInstructorsInDB(instruktorArray, id){
             vehicle.instructors = instruktorArray;
         }
     }
-    clearVehiclesContainer();
-    readVehiclesFromDB();
-    chanegeInstructors();
-    addEventListenerDeleteVehicle();
+}
+
+function clearInstructorsInVehiclesView(id){
+    const vehiclesDrivingSchool = document.getElementsByClassName('vehicle-driving-school');
+    for(const vehicle of vehiclesDrivingSchool){
+        if(vehicle.getElementsByClassName('vehicle-id')[0].innerText == id){
+            let instructorInput = vehicle.getElementsByClassName('instructor-input');
+            for(const input of instructorInput){
+                 input.value = "";
+            }
+        }
+    }
+}
+
+function addInstructorsInVehiclesView(id){
+    const vehiclesDrivingSchool = document.getElementsByClassName('vehicle-driving-school');
+    for(const vehicleOnPage of vehiclesDrivingSchool){
+        if(vehicleOnPage.getElementsByClassName('vehicle-id')[0].innerText == id){
+            const instructorsInput = vehicleOnPage.getElementsByClassName('instructor-input');
+            for(const vehicleOnDb of vehiclesArray){
+                if(vehicleOnDb.id == id){
+                    for(let i=0; i<vehicleOnDb.instructors.length; i++){
+                        instructorsInput[i].value = vehicleOnDb.instructors[i];
+                    }
+                }
+            }
+        }
+    }
+    removeEmptyInstructorInputs(id);
+}
+
+function removeEmptyInstructorInputs(id){
+    const vehiclesDrivingSchool = document.getElementsByClassName('vehicle-driving-school');
+    for(const vehicle of vehiclesDrivingSchool){
+        if(vehicle.getElementsByClassName('vehicle-id')[0].innerText == id){
+            const instructorsInput = vehicle.getElementsByClassName('instructor-input');
+            for(const instructorInput of instructorsInput){
+                if(instructorInput.value == ""){
+                    instructorInput.parentElement.remove()
+                }
+            }
+        }
+    }
 }
 
 function clearVehiclesContainer(){
