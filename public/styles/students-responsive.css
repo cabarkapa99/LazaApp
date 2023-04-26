@@ -1,0 +1,104 @@
+@media screen and (max-width: 1520px) {
+    .students-basic{
+        gap: 45%;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .students-basic{
+        gap: 40%;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .students-basic{
+        gap: 35%;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .students-search-container{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .students-basic{
+        gap: 30%;
+    }
+
+}
+
+@media screen and (max-width: 1125px) {
+    .full-name{
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .full-name{
+        width: 30%;
+    }
+
+    .students-search-container input{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .students-search-container{
+        gap: 2%;
+    }
+
+    .students-basic{
+        gap: 30%;
+    }
+
+    .full-name{
+        width: 30%;
+    }
+
+    .info-card{
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .students-search-container{
+        margin-top: 18%;
+    }
+
+    .students-search-container input{
+        width: 60%;
+    }
+
+    .students-basic{
+        gap: 25%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .students-basic{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .full-name{
+        width: auto;
+    }
+
+    .info-card{
+        width: 18%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .students-search-container{
+        margin-top: 20%;
+    }
+
+    .info-card{
+        width: 20%;
+    }
+}
