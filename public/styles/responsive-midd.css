@@ -665,3 +665,427 @@
         display: none;
     }
 }
+
+@media screen and (max-width:1250px) {
+    .clients{
+        height: 55vh;
+    }
+
+    #circles-13{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(248, 248, 248)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        right: 86%;
+        top: 55%;
+    }
+
+    #circles-12{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(248, 248, 248)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        left: 86%;
+        top: 14%;
+    }
+}
+
+@media screen and (max-width: 1125px) {
+    .clients{
+        height: 50vh;
+    }
+
+    #circles-12{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(248, 248, 248)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        left: 84%;
+        top: 14%;
+    }
+
+    #circles-13{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(248, 248, 248)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        right: 84%;
+        top: 55%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .clients{
+        height: 45vh;
+    }
+
+    #circles-12{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(248, 248, 248)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        left: 82%;
+        top: 14%;
+    }
+
+    #circles-13{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(248, 248, 248)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        right: 82%;
+        top: 55%;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    #circles-12{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(248, 248, 248)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        left: 80%;
+        top: 14%;
+    }
+
+    #circles-13{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(248, 248, 248)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        right: 80%;
+        top: 55%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .clients{
+        height: 40vh;
+    }
+
+    #circles-12{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(248, 248, 248)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        left: 78%;
+        top: 14%;
+    }
+
+    #circles-13{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(248, 248, 248)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        right: 78%;
+        top: 55%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    #circles-12{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(248, 248, 248)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        left: 76%;
+        top: 14%;
+    }
+
+    #circles-13{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(248, 248, 248)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        right: 76%;
+        top: 55%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #circles-12{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(248, 248, 248)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        left: 74%;
+        top: 14%;
+    }
+
+    #circles-13{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='rgb(248, 248, 248)' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        right: 74%;
+        top: 55%;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    #circles-14{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");  
+        position: absolute;
+        left: 74%;
+        top: 45vh;
+        z-index: -1;
+    }
+    
+    #circles-15{
+        height: 100px;
+        width: 170px;
+        background-image:  
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'> <rect width='3' height='3' fill='white' /><circle cx='5' cy='5' r='4' fill='rgb(203, 203, 203)' shape-rendering='geometricPrecision'/></svg>");
+        position: absolute;
+        right: 86%;
+        top: 76%;
+    }
+
+    .faq{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1212px) {
+    .faq{
+        margin: 120px 18% 120px 18%;
+    }
+
+    #circles-14{
+        left: 76%;
+        top: 35vh;
+    }
+
+    #circles-15{
+        top: 72%;
+    }
+}
+
+@media screen and (max-width: 1136px) {
+    .faq{
+        margin: 120px 17% 120px 17%;
+    }
+
+    #circles-14{
+        left: 77%;
+    }
+
+    #circles-15{
+        right: 84%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .faq{
+        margin-left: 16%;
+        margin-right: 16%;
+    }
+
+    #circles-14{
+        left: 78%;
+    }
+}
+
+@media screen and (max-width: 1068px) {
+    .faq{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+@media screen and (max-width: 1039px) {
+    .question{
+        width: 91%;
+    }
+}
+
+@media screen and (max-width: 924px) {
+    .question{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 832px) {
+    .question{
+        width: 89%;
+    }
+
+    #circles-14{
+        left: 80%;
+        top: 32vh;
+    }
+}
+
+@media screen and (max-width: 756px) {
+    .question{
+        width: 88%;
+    }
+
+    #circles-15{
+        right: 74%;
+    }
+}
+
+@media screen and (max-width: 693px) {
+    .question{
+        width: 87%;
+    }
+
+    #circles-14{
+        left: 76%;
+    }
+
+    .answer{
+        padding: 50px 80px 50px 80px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .question{
+        width: 86%;
+    }
+
+    #circles-14{
+        top: 42vh;
+    }
+
+    #circles-15{
+        right: 72%;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    #circles-16{
+        left: 82%;
+        top: 47%;
+    }
+
+    #circles-17{
+        left: 82%;
+    }
+
+    .footer{
+        margin-left: 5%;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    #circles-16{
+        left: 80%;
+    }
+    
+    #circles-17{
+        left: 80%;
+    }
+}
+
+@media screen and (max-width: 1046px) {
+    #circles-16{
+        left: 78%;
+    }
+
+    #circles-17{
+        left: 78%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #circles-16{
+        left: 76%;
+    }
+
+    #circles-17{
+        left: 76%;
+    }
+
+    .footer{
+        margin-left: 2%;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .footer{
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        gap: 15vh;
+    }
+
+    #circles-16{
+        left: 74%;
+    }
+
+    #circles-17{
+        left: 74%;
+        top: 62%;
+    }
+
+    .footer-3 input{
+        position: absolute;
+        top: 20%;
+    }
+
+    .footer-heading{
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    #circles-16{
+        left: 72%;
+    }
+
+    #circles-17{
+        left: 72%;
+    }
+}
+
+@media screen and (max-width: 755px) {
+    #circles-16{
+        left: 70%;
+    }
+
+    #circles-17{
+        left: 70%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #circles-16{
+        left: 68%;
+    }
+
+    #circles-17{
+        left: 68%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    #circles-16{
+        left: 64%;
+    }
+
+    #circles-17{
+        left: 64%;
+    }
+
+    .footer-1{
+        z-index: 3;
+    }
+}

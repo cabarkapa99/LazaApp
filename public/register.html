@@ -35,18 +35,18 @@
                     <div id="wrong-value-div" class="wrong-value-div"></div>
                     <h2>Prijavite se</h2>
                     <h3>Unesite Vase podatke</h3>
-                    <form class="login-form">
-                        <input class="control" type="text" placeholder="Username" id="username-login">
+                    <form class="login-form" action="/djordje" method="POST">
+                        <input class="control" type="text" placeholder="Username" id="username-login" name="username">
                         <div class="password">
-                            <input class="control" id="password-login" placeholder="Password">
+                            <input class="control" id="password-login" placeholder="Password" name="password" type="password">
                             <button class="toggle" type="button" onclick="togglePassword(this)"></button>
                         </div>
-                        <button class="control">LOGIN</button>
+                        <button type="submit" class="control">LOGIN</button>
                     </form>
                     <div id="create-new-account">Napravite novi nalog</div>
                 </div>
 
-                <div class="register-card hiden" id="register-card">
+                <div class="register-card hidden" id="register-card">
                     <div id="wrong-value-div-reg" class="wrong-value-div"></div>
                     <h2>Registrujte se</h2>
 
@@ -55,7 +55,7 @@
                         <input class="control" type="email" placeholder="Email" id="email-register">
                         <input class="control" type="text" placeholder="Username" id="username-register">
                         <div class="password">
-                            <input class="control" id="password-register" placeholder="Password">
+                            <input class="control" id="password-register" placeholder="Password" type="password">
                             <button class="toggle" type="button" onclick="togglePassword(this)"></button>
                         </div>
                         <button class="control">REGISTER</button>

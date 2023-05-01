@@ -1,27 +1,72 @@
 const navLis = document.getElementsByClassName('nav-li');
 const navAs = document.getElementsByClassName('nav-a');
+const hiddenElements = document.getElementsByClassName('hidden-element');
 
 for(let i=1; i<navLis.length-1; i++){
     navAs[i].addEventListener('click', (e)=>{
         for(let j=0; j<navLis.length; j++){
-            navAs[j].classList.remove('li-clicked');
-            navLis[j].classList.remove('li-clicked1');
-            navAs[j].classList.remove('li-clicked1');
-            navAs[j].classList.remove('li-clicked2');
+            unmarkClickedLi(j);
         }
-        if(i != navLis.length-1){
-            navAs[i+1].classList.add('li-clicked');
-            navLis[i+1].classList.add('li-clicked1');
-        }
-        navAs[i].classList.add('li-clicked1');
-        
-        if(i != 0){
-            navAs[i-1].classList.add('li-clicked2');
-            navLis[i-1].classList.add('li-clicked1');
-        }
+        markClickedLi(i);
+        hideDivsInMainSection();
+        showCalledDivInMainSection(navAs[i].parentElement.id);
     });
 }
+function hideDivsInMainSection(){
+    for(const element of hiddenElements){
+        element.classList.add('hidden');
+    }
+}
+function showCalledDivInMainSection(LiID){
+    const id = LiID.slice(3, LiID.length);
+    const calledDivID = document.getElementById(id);
+    if(calledDivID != null){
+        calledDivID.classList.remove('hidden');
+    }
+}
+function unmarkClickedLi(j){
+    navAs[j].classList.remove('li-clicked');
+    navLis[j].classList.remove('li-clicked1');
+    navAs[j].classList.remove('li-clicked1');
+    navAs[j].classList.remove('li-clicked2');
+}
+function markClickedLi(i){
+    if(i != navLis.length-1){
+        navAs[i+1].classList.add('li-clicked');
+        navLis[i+1].classList.add('li-clicked1');
+    }
+    navAs[i].classList.add('li-clicked1');
+    
+    if(i != 0){
+        navAs[i-1].classList.add('li-clicked2');
+        navLis[i-1].classList.add('li-clicked1');
+    }
+}
 
+const mainButtons = document.getElementsByClassName('main-button');
+
+for(const button of mainButtons){
+    let buttonID = button.id.slice(0, button.id.length-4);
+    button.addEventListener('click', (e)=>{
+        let modalID = buttonID + "-modal";
+        showModal(modalID);
+        let modalIDX = buttonID + "-modal-x";
+        addEventListenermodalX(modalIDX, modalID);
+    })
+}
+function showModal(modalID){
+    let modal = document.getElementById(modalID);
+    modals.classList.remove('hidden');
+    modal.classList.remove('hidden');
+}
+function addEventListenermodalX(modalIDX, modalID){
+    let modalX = document.getElementById(modalIDX);
+    let modal = document.getElementById(modalID);
+    modalX.addEventListener('click', (e)=>{
+        modals.classList.add('hidden');
+        modal.classList.add("hidden");
+    })
+}
 
 const line1 = document.getElementById('line1');
 const line2 = document.getElementById('line2');
@@ -106,3 +151,4 @@ bellOff.addEventListener('click', function(){
         closeList1();
     }
 });
+
