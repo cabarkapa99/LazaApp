@@ -42,7 +42,7 @@
     .vehicle-driving-school-registration h3{
         font-size: calc(.6vw + 10px);
     }
-    .vehicle-driving-school-instructors ul li{
+    .vehicle-driving-school-instructors ul li input{
         font-size: calc(.6vw + 9px);
     }
     .vehicle-driving-school-technical-review h3{
@@ -66,6 +66,12 @@
     }
     .vehicles-driving-school-conteiner{
         width: 90%;
+    }
+    .vehicle-driving-school-button-1{
+        font-size: calc(.8vw + 10px);
+    }
+    .vehicle-driving-school-button-2{
+        font-size: calc(.8vw + 10px);
     }
 }
 @media (max-width: 600px){
@@ -101,35 +107,54 @@
     #vehicles-search-by-category-select{
         width: 90%;
     }
+    .vehicle-driving-school{
+        flex-direction: column;
+    }
     .vehicle-driving-school-left-side{
-        width: 50%;
+        width: 80%;
+        margin: auto;
     }
     .vehicle-driving-school-right-side{
+        width: 100%;
         padding: 8% 0;
         gap: 15px;
     }
+    .vehicle-driving-school-model-brand h3{
+        font-size: calc(.6vw + 14px);
+        padding: 10px 15%;
+    }
     .vehicle-driving-school-registration p{
-        font-size: calc(.6vw + 10px);
+        font-size: calc(.6vw + 12px);
+    }
+    .vehicle-driving-school-registration h3{
+        font-size: calc(.6vw + 14px);
     }
     .vehicle-driving-school-technical-review h3{
-        font-size: calc(.6vw + 9px);
+        font-size: calc(.6vw + 12px);
         padding: 5px 15px;
+    }
+    .vehicle-driving-school-button{
+        gap: 5px;
+    }
+    .vehicle-driving-school-button-1{
+        font-size: calc(.6vw + 14px);
+    }
+    .vehicle-driving-school-button-2{
+        font-size: calc(.6vw + 14px);
     }
 }
 @media (max-width: 450px){
-    .vehicle-driving-school-right-side{
-        padding: 8% 3%;
+    .vehicle-driving-school-buttons{
+        gap: 10px;
     }
-    .vehicle-driving-school-model-brand h3{
-        width: 90%;
+    .vehicle-driving-school-button-1, .vehicle-driving-school-button-2{
+        width: 40%;
+        gap: 5px;
+    }
+    .vehicle-driving-school-instructors ul li input{
+        font-size: calc(.6vw + 12px);
+    }
+    .vehicle-driving-school-model-brand{
         text-align: center;
-        padding: 10px 0;
-    }  
-    .vehicle-driving-school-registration h3{
-        padding: 12px 35px;
-    }
-    .vehicle-driving-school-technical-review h3{
-        font-size: calc(.6vw + 8px);
-        padding: 5px 10px;
     }
 }

@@ -21,7 +21,6 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .center-y-axis{
@@ -35,13 +34,15 @@ body{
 .block{
     display: block;
 }
-.hiden{
+.hidden{
     visibility: hidden;
     opacity: 0;
+    transition: all .4s ease-out !important;
 }
 .visible{
     visibility: visible;
     opacity: 1;
+    transition: all .4s ease-out !important;
 }
 header{
     height: 10vh;
@@ -245,7 +246,7 @@ nav ul li a:hover{
     background-color: rgba(100, 100, 100, 0.8);
     position: fixed;
     z-index: 6;
-    transition: visibility 0.3s, opacity 0.3s linear;
+    transition: all 0.3s, all 0.3s linear;
 }
 .login-card, .register-card{
     width: 400px;

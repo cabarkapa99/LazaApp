@@ -21,7 +21,9 @@ const emailRegister = document.getElementById('email-register');
 
 loginBtn.addEventListener('click', (e)=>{
     loginRegisterCards.classList.add('visible');
+    loginRegisterCards.classList.remove('hidden');
     loginCard.classList.add('visible');
+    loginCard.classList.remove('hidden');
     setTimeout(function(){
         usernameLogin.focus();
     }, 100);
@@ -29,6 +31,8 @@ loginBtn.addEventListener('click', (e)=>{
 closeLoginBtn.addEventListener('click', (e)=>{
     loginRegisterCards.classList.remove('visible');
     loginCard.classList.remove('visible');
+    loginRegisterCards.classList.add('hidden');
+    loginCard.classList.add('hidden');
     for(let i=0; i<controls.length; i++){
         controls[i].value = '';
     }
@@ -36,6 +40,8 @@ closeLoginBtn.addEventListener('click', (e)=>{
 registerBtn.addEventListener('click', (e)=>{
     loginRegisterCards.classList.add('visible');
     registerCard.classList.add('visible');
+    loginRegisterCards.classList.remove('hidden');
+    registerCard.classList.remove('hidden');
     setTimeout(function(){
         emailRegister.focus();
     }, 100);
@@ -43,6 +49,8 @@ registerBtn.addEventListener('click', (e)=>{
 closeRegister.addEventListener('click', (e)=>{
     loginRegisterCards.classList.remove('visible');
     registerCard.classList.remove('visible');
+    loginRegisterCards.classList.add('hidden');
+    registerCard.classList.add('hidden');
     for(let i=0; i<controls.length; i++){
         controls[i].value = '';
     }
