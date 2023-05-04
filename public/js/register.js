@@ -16,11 +16,11 @@ const loginCard = document.getElementById('login-card');
 
 createNewAccount.addEventListener('click', (e)=>{
     registerCard.classList.add('visible');
-    loginCard.classList.add('hiden');
+    loginCard.classList.add('hidden');
 });
 alreadyHaveAccount.addEventListener('click', (e)=>{
     registerCard.classList.remove('visible');
-    loginCard.classList.remove('hiden');
+    loginCard.classList.remove('hidden');
 });
 
 const wrongValueDiv = document.getElementById('wrong-value-div');

@@ -45,6 +45,11 @@ const teachersSchema = new mongoose.Schema({
         required: true,
         default:"email adresa instruktora"
     },
+    redniBr:{
+        type: Number,
+        required: true,
+        default: -1
+    }
 
 }, {collection:'teachers'});
 
