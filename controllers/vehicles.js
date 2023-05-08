@@ -15,7 +15,7 @@ async function getVehicles(req, res, next) {
 }
 async function addVehicle(req, res, next) {
     try {
-      const { vehicleData } = req.body;
+      const vehicleData = req.body;
       const newVehicle = await model.addVehicle(vehicleData);
       res.status(201).json(newVehicle);
     } catch (error) {

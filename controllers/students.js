@@ -29,7 +29,10 @@ async function addStudent(req, res, next) {
 }
 async function searchStudents(req, res, next) {
     try {
-      const { searchIme, searchPrezime, searchBrKandidata } = req.body;
+      // const { searchIme, searchPrezime, searchBrKandidata } = req.body;
+      const searchIme = req.params.ime;
+      const searchPrezime = req.params.prezime;
+      const searchBrKandidata = parseInt(req.params.br);
       const results = await model.searchStudents(searchIme, searchPrezime, searchBrKandidata);
       
       if (results === null) {
