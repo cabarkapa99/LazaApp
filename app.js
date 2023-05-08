@@ -1,25 +1,26 @@
 const express = require('express');
+const {urlencoded, json} = require('body-parser');
 const path = require('path');
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/laza', 
+mongoose.connect('mongodb://127.0.0.1:27017/laza', 
 {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 
 const routerStudents = require('./routers/students.js');
-const routerUsers = require('./routers/students.js');
-const routerVehicles = require('./routers/students.js');
-const routerTeachers = require('./routers/students.js');
-const routerExams = require('./routers/students.js');
-const routerPayments = require('./routers/students.js');
+const routerUsers = require('./routers/users.js');
+const routerVehicles = require('./routers/vehicles.js');
+const routerTeachers = require('./routers/teachers.js');
+const routerExams = require('./routers/exams.js');
+const routerPayments = require('./routers/payments.js');
 
 const app = express();
 
-app.use(express.urlencoded({extended: false}));
-app.use(express.json());
+app.use(urlencoded({extended: false}));
+app.use(json());
 
 
 app.use('/students', routerStudents);
@@ -37,6 +38,7 @@ app.use(function (err, req, res, next) {
     console.log(err);
     res.status(500).json(err.message);
 });
+
 
 
 module.exports = app;

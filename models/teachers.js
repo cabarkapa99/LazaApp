@@ -55,7 +55,23 @@ const teachersSchema = new mongoose.Schema({
 
 const TeachersModel = mongoose.model('Teachers', teachersSchema);
 
+async function getTeachersId(teachersNumber){
+    const teacher = await TeachersModel.find({redniBr: teachersNumber}).exec();
+    return teacher._id;
+}
+
+async function getTeachers(){
+    let teachers = await TeachersModel.find().exec();
+    if(teachers.length > 0){
+        return teachers;
+    }else{
+        return null;
+    }
+}
 
 module.exports = {
     model : TeachersModel,
+    getTeachersId,
+    getTeachers,
+    
 }
