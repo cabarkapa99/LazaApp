@@ -6,6 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="./styles/app.css">
+        <link rel="stylesheet" type="text/css" href="./styles/students.css">
+        <link rel="stylesheet" type="text/css" href="./styles/students-responsive.css">
         <link rel="stylesheet" type="text/css" href="./styles/vehicles.css">
         <link rel="stylesheet" type="text/css" href="./styles/vehicles-responsive.css">
         <link rel="stylesheet" type="text/css" href="./styles/app-responsive.css">
@@ -33,7 +35,7 @@
                 <ul id="nav-list">
                     <li class="nav-li li-clicked1"><a class="nav-a li-clicked2"></a></li>
                     <li class="nav-li" id="li-hero"><a href="#" class="nav-a li-clicked1"><i class="fa fa-home" aria-hidden="true"></i><p>Početna</p></a></li>
-                    <li class="nav-li li-clicked1"><a href="#" class="nav-a li-clicked"><i class="fa fa-graduation-cap" aria-hidden="true"></i><p>Učenici</p></a></li>
+                    <li class="nav-li li-clicked1" id="li-students"><a href="#" class="nav-a li-clicked"><i class="fa fa-graduation-cap" aria-hidden="true"></i><p>Učenici</p></a></li>
                     <li class="nav-li"><a href="#" class="nav-a"><i class="fa fa-user-o" aria-hidden="true"></i><p>Predavači</p></a></li>
                     <li class="nav-li" id="li-vehicles"><a href="#" class="nav-a"><i class="fa fa-car" aria-hidden="true"></i><p>Vozila</p></a></li>
                     <li class="nav-li"><a href="#" class="nav-a"><i class="fa fa-cogs" aria-hidden="true"></i><p>Podešavanja</p></a></li>
@@ -252,6 +254,41 @@
                     </template>
                 </div>
             </div>
+            <div id="students" >
+                <div class="students-search-container">
+                    <input type="search" placeholder="Ime" id="name-search">
+                    <input type="search" placeholder="Prezime" id="surname-search">
+                    <input type="search" placeholder="id" id="id-search">
+                    <button class="search-btn" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+                <div class="students-list-container">
+                    <template id="students-list-template">
+                        <div class="students-list-item">
+                            <div class="students-basic">
+                                <div class="full-name">
+                                    <p class="students-name"></p>
+                                    <p class="students-surname"></p>
+                                </div>
+                                <p class="students-id"></p>
+                            </div>
+                            <div class="students-info hidden-info">
+                                <div class="info-cards-container">
+                                    <div class="info-card opened-card"><p>Info 1</p></div>
+                                    <div class="info-card"><p>Info 2</p></div>
+                                    <div class="info-card"><p>Info 3</p></div>
+                                    <div class="info-card"><p>Info 4</p></div>
+                                </div>
+                                <div class="info-display">
+                                    <p class="info">Neke informacije 1</p>
+                                    <p class="info hidden-info">Neke informacije 2</p>
+                                    <p class="info hidden-info">Neke informacije 3</p>
+                                    <p class="info hidden-info">Neke informacije 4</p>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
         </div>
 
         <div id="notifications" class="translate150">
@@ -343,6 +380,8 @@
 
 
         <script src="./js/app.js"></script>
+        <script src="./js/students.js"></script>
         <script src="./js/vehicles.js"></script>
     </body>
 </html>
+

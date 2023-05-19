@@ -151,4 +151,3 @@ bellOff.addEventListener('click', function(){
         closeList1();
     }
 });
-
