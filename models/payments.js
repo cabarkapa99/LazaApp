@@ -60,5 +60,4 @@ module.exports = {
     model : PaymentsModel,
     addPayment,
     getPaymentsForStudent,
-    
-}
+    }

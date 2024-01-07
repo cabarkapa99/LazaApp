@@ -366,4 +366,3 @@ function deleteVehicle(id){
     addEventListenerDeleteVehicle();
     sortListOfCategories();
 }
-

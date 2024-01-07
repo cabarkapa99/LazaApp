@@ -171,5 +171,4 @@ module.exports = {
     searchExams,
     getStudentsForExam,
     updateStudentExamStatus,
-
 }
